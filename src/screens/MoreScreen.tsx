@@ -46,10 +46,9 @@ export default function MoreScreen({ onNavigate }: MoreScreenProps) {
 
   const sections = [
     {
-      title: 'Identity & reputation',
+      title: 'Identity & accounts',
       items: [
         { id: 'profile', icon: User, label: 'Personal profile', sub: 'Bio & verified id', color: 'text-blue-500 bg-blue-50' },
-        { id: 'reputation', icon: BadgeCheck, label: 'Reputation score', sub: 'Trust level 4', color: 'text-emerald-500 bg-emerald-50' },
         { id: 'security', icon: ShieldCheck, label: 'Account security', sub: 'Biometrics active', color: 'text-slate-500 bg-slate-50' },
       ]
     },
@@ -66,14 +65,14 @@ export default function MoreScreen({ onNavigate }: MoreScreenProps) {
       items: [
         { id: 'discover', icon: MapPin, label: 'Snap africa', sub: 'Photo map', color: 'text-amber-500 bg-amber-50' },
         { id: 'afrihero', icon: Archive, label: 'Afrihero & history', sub: 'Archive', color: 'text-indigo-500 bg-indigo-50' },
-        { id: 'yearbook', icon: GraduationCap, label: 'Memory network', sub: 'Relive history', color: 'text-sky-500 bg-sky-50' },
+        { id: 'heritage', icon: GraduationCap, label: 'Afriheritage', sub: 'Relive history', color: 'text-sky-500 bg-sky-50' },
       ]
     },
     {
       title: 'Community & governance',
       items: [
         { id: 'tribes', icon: Users, label: 'Tribes hub', sub: 'Community networks', color: 'text-violet-500 bg-violet-50' },
-        { id: 'governance', icon: Vote, label: 'Afrivote', sub: 'Secure voting', color: 'text-purple-500 bg-purple-50' },
+        { id: 'arivote', icon: Vote, label: 'Ari-vote', sub: 'Secure voting', color: 'text-purple-500 bg-purple-50' },
         { id: 'fundraiser', icon: Heart, label: 'Fundraisers', color: 'text-rose-500 bg-rose-50' },
       ]
     },
@@ -168,16 +167,16 @@ export default function MoreScreen({ onNavigate }: MoreScreenProps) {
 
           <div className="grid grid-cols-3 gap-2">
             <div className="bg-slate-50 rounded-2xl p-4 text-center">
-              <p className="text-xl font-black text-slate-900">1,240</p>
-              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">Reputation</p>
+              <p className="text-xl font-black text-slate-900">12</p>
+              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">Records</p>
             </div>
             <div className="bg-slate-50 rounded-2xl p-4 text-center">
               <p className="text-xl font-black text-slate-900">42</p>
               <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">Tribes</p>
             </div>
             <div className="bg-slate-50 rounded-2xl p-4 text-center">
-              <p className="text-xl font-black text-slate-900">15</p>
-              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">Records</p>
+              <p className="text-xl font-black text-slate-900">850</p>
+              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">Followers</p>
             </div>
           </div>
         </div>

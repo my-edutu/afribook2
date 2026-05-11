@@ -204,93 +204,121 @@ export default function HomeScreen({ onNavigate }: HomeScreenProps) {
         )}
       </AnimatePresence>
 
-      <main className="pb-32">
-        {/* Stories */}
-        <section className="py-6 overflow-x-auto no-scrollbar flex gap-5 px-6">
-          <div className="flex flex-col items-center gap-2 shrink-0">
-            <div 
-              onClick={() => startCreatingStory('photo')}
-              className="size-18 rounded-full flex items-center justify-center text-primary cursor-pointer bg-white border-2 border-dashed border-primary/30 shadow-sm active:scale-90 transition-transform"
-            >
-              <Plus size={28} />
+      <main className="pb-32 bg-slate-100">
+        {/* Story Section */}
+        <section className="bg-white px-6 py-6 border-b border-slate-200">
+          <div className="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+            {/* Create Story */}
+            <div className="flex flex-col items-center shrink-0">
+               <div 
+                 onClick={() => startCreatingStory('photo')}
+                 className="size-16 rounded-[24px] bg-slate-50 border-2 border-dashed border-slate-200 flex items-center justify-center text-slate-400 cursor-pointer hover:bg-slate-100 transition-all active:scale-90"
+               >
+                 <Plus size={24} />
+               </div>
+               <span className="text-[10px] font-bold text-slate-400 mt-2">Create</span>
             </div>
-            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Your story</span>
+            {stories.map(story => (
+              <div key={story.id} className="flex flex-col items-center shrink-0 group relative">
+                <div className="size-16 rounded-[24px] p-0.5 bg-primary/20 shadow-sm transition-transform active:scale-95">
+                  <img src={story.img} alt={story.name} className="w-full h-full rounded-[22px] object-cover" />
+                </div>
+                <span className="text-[10px] font-bold text-slate-600 mt-2 lowercase first-letter:uppercase">{story.name}</span>
+              </div>
+            ))}
           </div>
-          {stories.map(story => (
-            <div key={story.id} className="flex flex-col items-center gap-2 shrink-0 cursor-pointer relative group">
-              <div className="size-18 rounded-full p-1 bg-white shadow-md ring-2 ring-primary/20 group-active:scale-95 transition-transform">
-                <img src={story.img} alt={story.name} className="w-full h-full rounded-full object-cover" />
-              </div>
-              <span className="text-[10px] font-bold text-slate-600 lowercase first-letter:uppercase">{story.name}</span>
-              <div className="absolute top-0 right-0 size-6 bg-white rounded-full shadow-lg flex items-center justify-center border border-slate-50">
-                {story.type === 'photo' && <Camera size={12} className="text-primary" />}
-                {story.type === 'video' && <PlayCircle size={12} className="text-rose-500" />}
-                {story.type === 'voice' && <Mic size={12} className="text-blue-500" />}
-              </div>
-            </div>
-          ))}
         </section>
 
-        {/* Feed posts */}
-        <div className="px-6 space-y-8 mt-2">
+        {/* Create Post Box */}
+        <section className="bg-white px-6 py-5 mb-4 border-b border-slate-200">
+          <div className="flex gap-4 items-center">
+            <div className="size-12 rounded-full overflow-hidden bg-slate-200">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYcG24Dieu84a3gmMn85e5BjbaF9vnbx5O6VKycbLNsSuEZtwI-9vn7p9Eo9EX8ATUs7wdAXSllcaK28WG5KMp08jOA2SagxmnxsI2wl95LLSiy0a6fr4Xo3CzifS7z86lE2Myaiduu0Xpvdc6vh2SmhXxHxUfDNBy6nOQltZOFtRDohhkW0UHE1XGHMHtwjQ-IJOYYialORWdwChDCX7dJTOp0OTYsdio87oL_Dp-yodBVOfHQunDDCI_7adeRosZVWbhfMaFev4" alt="Me" className="w-full h-full object-cover" />
+            </div>
+            <button className="flex-1 h-12 bg-slate-50 rounded-full px-6 text-left text-slate-500 text-sm font-medium border border-slate-100 hover:bg-slate-100 transition-colors">
+              What's your record today?
+            </button>
+          </div>
+          <div className="flex items-center gap-6 mt-5 pt-4 border-t border-slate-50">
+            <button className="flex-1 flex items-center justify-center gap-2 py-2 rounded-xl hover:bg-slate-50 transition-colors">
+              <Camera size={18} className="text-rose-500" />
+              <span className="text-[10px] font-black uppercase text-slate-500">Live</span>
+            </button>
+            <button className="flex-1 flex items-center justify-center gap-2 py-2 rounded-xl hover:bg-slate-50 transition-colors">
+              <ImageIcon size={18} className="text-emerald-500" />
+              <span className="text-[10px] font-black uppercase text-slate-500">Media</span>
+            </button>
+            <button className="flex-1 flex items-center justify-center gap-2 py-2 rounded-xl hover:bg-slate-50 transition-colors">
+              <MapPin size={18} className="text-amber-500" />
+              <span className="text-[10px] font-black uppercase text-slate-500">Check-in</span>
+            </button>
+          </div>
+        </section>
+
+        {/* Feed Posts */}
+        <div className="space-y-4">
           {feedPosts.map((post) => (
-            <article key={post.id} className="bg-white rounded-[40px] p-8 shadow-sm border border-slate-50 transition-all hover:shadow-lg">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-4">
-                  <div className="size-14 rounded-full overflow-hidden border-2 border-slate-50 shadow-inner">
-                    <img src={post.user.img} alt={post.user.name} className="w-full h-full object-cover" />
+            <article key={post.id} className="bg-white border-y border-slate-200">
+              <div className="px-6 py-5">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="size-12 rounded-full overflow-hidden bg-slate-100">
+                      <img src={post.user.img} alt={post.user.name} className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <h4 className="font-black text-slate-900 leading-none mb-1 text-base">{post.user.name}</h4>
+                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-tight">{post.time} • {post.location}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-black text-lg text-slate-900 leading-none mb-1.5">{post.user.name}</h4>
-                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-tight">{post.time} • {post.location}</p>
-                  </div>
+                  <button className="p-2 text-slate-300 hover:text-slate-900 transition-all">
+                    <MoreHorizontal size={20} />
+                  </button>
                 </div>
-                <button className="p-3 bg-slate-50 rounded-full text-slate-300 hover:text-slate-900 transition-all active:scale-90">
-                  <MoreHorizontal size={20} />
-                </button>
+                
+                <p className="text-sm text-slate-700 leading-relaxed mb-4 font-medium">{post.content}</p>
               </div>
-              
-              <p className="text-sm text-slate-700 leading-relaxed mb-6 font-medium">{post.content}</p>
-              
+
               {post.image && (
-                <div className="rounded-[32px] overflow-hidden mb-6 aspect-[4/3] shadow-inner">
+                <div className="w-full aspect-[4/3] bg-slate-100 border-y border-slate-50">
                   <img src={post.image} alt="post" className="w-full h-full object-cover" />
                 </div>
               )}
 
-              <div className="flex items-center justify-between mt-2">
-                <div className="flex items-center gap-6">
-                  <button className="flex items-center gap-2 text-slate-400 transition-colors hover:text-primary group">
-                    <div className="group-active:scale-125 transition-transform">
-                      <Heart size={24} />
-                    </div>
-                    <span className="text-xs font-black">{post.likes}</span>
-                  </button>
-                  <button className="flex items-center gap-2 text-slate-400 transition-colors hover:text-primary">
-                    <MessageCircle size={24} />
-                    <span className="text-xs font-black">{post.comments}</span>
-                  </button>
-                  <button className="flex items-center gap-2 text-primary font-black bg-primary/5 px-5 py-2 rounded-2xl ring-1 ring-primary/20 hover:bg-primary hover:text-white transition-all active:scale-95">
-                    <Coins size={18} />
-                    <span className="text-[10px] uppercase tracking-widest">Tip</span>
-                  </button>
+              <div className="px-6 py-4 flex items-center justify-between">
+                <div className="flex items-center gap-1">
+                   <div className="flex -space-x-1.5 mr-2">
+                      <div className="size-5 rounded-full bg-primary flex items-center justify-center ring-2 ring-white">
+                        <Heart size={10} fill="white" className="text-white" />
+                      </div>
+                      <div className="size-5 rounded-full bg-amber-500 flex items-center justify-center ring-2 ring-white">
+                        <Coins size={10} fill="white" className="text-white" />
+                      </div>
+                   </div>
+                   <span className="text-[10px] text-slate-400 font-bold uppercase">{post.likes}</span>
                 </div>
-                <div className="flex items-center gap-5 text-slate-200">
-                  <Bookmark size={22} className="hover:text-amber-500 cursor-pointer transition-colors" />
-                  <Share2 size={22} className="hover:text-primary cursor-pointer transition-colors" />
+                <div className="flex items-center gap-3">
+                   <span className="text-[10px] text-slate-400 font-bold uppercase">{post.comments} comments</span>
+                   <span className="text-[10px] text-slate-400 font-bold uppercase">12 shares</span>
                 </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-slate-50 flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <div className="flex -space-x-3">
-                     {[1,2,3].map(i => (
-                       <div key={i} className="size-8 rounded-full border-4 border-white bg-slate-200 shadow-sm" />
-                     ))}
-                  </div>
-                  <span className="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">84 viewers</span>
-                </div>
-                <button className="text-[10px] font-black text-primary uppercase tracking-[0.2em] bg-primary/5 px-5 py-2 rounded-xl border border-primary/10">React now</button>
+              <div className="px-4 py-1 mx-2 border-t border-slate-100 flex items-center justify-between">
+                <button className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl hover:bg-slate-50 transition-colors group">
+                  <Heart size={20} className="text-slate-400 group-active:scale-125 transition-transform" />
+                  <span className="text-[10px] font-black uppercase text-slate-500">Love</span>
+                </button>
+                <button className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl hover:bg-slate-50 transition-colors">
+                  <MessageCircle size={20} className="text-slate-400" />
+                  <span className="text-[10px] font-black uppercase text-slate-500">Chat</span>
+                </button>
+                <button className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl hover:bg-slate-50 transition-colors text-primary bg-primary/5 shadow-inner">
+                  <Coins size={20} className="text-primary animate-bounce-slow" />
+                  <span className="text-[10px] font-bold uppercase">Tip</span>
+                </button>
+                <button className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl hover:bg-slate-50 transition-colors">
+                  <Share2 size={20} className="text-slate-400" />
+                  <span className="text-[10px] font-black uppercase text-slate-500">Share</span>
+                </button>
               </div>
             </article>
           ))}

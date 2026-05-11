@@ -20,7 +20,8 @@ import FundraiserScreen from './screens/FundraiserScreen';
 import AriMarketScreen from './screens/AriMarketScreen';
 import ShowroomAIScreen from './screens/ShowroomAIScreen';
 import SettingsScreen from './screens/SettingsScreen';
-import MemoryNetworkScreen from './screens/MemoryNetworkScreen';
+import HeritageScreen from './screens/HeritageScreen';
+import AriVoteScreen from './screens/AriVoteScreen';
 import MetaverseScreen from './screens/MetaverseScreen';
 import AfriHeroScreen from './screens/AfriHeroScreen';
 import MiniAppCenter from './screens/MiniAppCenter';
@@ -55,8 +56,10 @@ export default function App() {
         return <ShowroomAIScreen onNavigate={setActiveScreen} />;
       case 'settings':
         return <SettingsScreen onNavigate={setActiveScreen} />;
-      case 'yearbook':
-        return <MemoryNetworkScreen onNavigate={setActiveScreen} />;
+      case 'heritage':
+        return <HeritageScreen onNavigate={setActiveScreen} />;
+      case 'arivote':
+        return <AriVoteScreen onNavigate={setActiveScreen} />;
       case 'metaverse':
         return <MetaverseScreen onNavigate={setActiveScreen} />;
       case 'afrihero':
@@ -94,17 +97,6 @@ export default function App() {
         return <AfriPayScreen onNavigate={(s) => setActiveScreen(s)} />;
       case 'profile':
         return <ProfileScreen onNavigate={(s) => setActiveScreen(s)} />;
-      case 'reputation':
-        return (
-          <div className="flex flex-col items-center justify-center min-h-[60vh] p-8 text-center bg-white rounded-b-[40px] shadow-sm">
-            <div className="size-24 bg-emerald-50 rounded-[32px] flex items-center justify-center text-emerald-500 mb-8 shadow-inner ring-8 ring-emerald-50/50">
-              <Shield size={44} />
-            </div>
-            <h2 className="text-3xl font-black text-slate-900 mb-3 tracking-tighter">Reputation score</h2>
-            <p className="text-slate-500 text-sm font-medium max-w-xs leading-relaxed mb-6">Your trust level is calculated based on verified contributions, tribe participation, and verified heritage records.</p>
-            <div className="bg-emerald-500 text-white px-8 py-3 rounded-2xl text-xl font-black shadow-lg shadow-emerald-500/20">Level 4</div>
-          </div>
-        );
       case 'security':
         return (
           <div className="flex flex-col items-center justify-center min-h-[60vh] p-8 text-center bg-white rounded-b-[40px] shadow-sm">

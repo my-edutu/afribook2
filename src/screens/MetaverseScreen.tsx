@@ -41,36 +41,35 @@ function VRScene() {
             <mesh position={[0, 0, 0]}>
               <sphereGeometry args={[2.5, 64, 64]} />
               <MeshDistortMaterial 
-                color="#6366f1" 
-                speed={2} 
-                distort={0.4} 
+                color="#818cf8" 
+                speed={3} 
+                distort={0.6} 
                 radius={1} 
-                emissive="#312e81" 
-                roughness={0.2}
-                metalness={0.8}
+                emissive="#4338ca" 
+                roughness={0.1}
+                metalness={1}
               />
             </mesh>
             <Text
               position={[0, 4, 0]}
               fontSize={0.8}
               color="white"
-              font="https://fonts.gstatic.com/s/spacegrotesk/v13/V8mRQDqQzg9P98shxi8E3nzW_XItNBeFv6rYgg.woff"
               anchorX="center"
               anchorY="middle"
             >
-              AfriNode
+              AFRINODE
             </Text>
           </group>
         </Float>
 
         {/* Dynamic Data Ring */}
-        {[...Array(24)].map((_, i) => {
-          const angle = (i / 24) * Math.PI * 2;
-          const radius = 6;
+        {[...Array(32)].map((_, i) => {
+          const angle = (i / 32) * Math.PI * 2;
+          const radius = 7;
           return (
-            <mesh key={i} position={[Math.cos(angle) * radius, -1, Math.sin(angle) * radius]}>
-              <boxGeometry args={[0.2, 0.1, 0.5]} />
-              <meshStandardMaterial color="#6366f1" emissive="#6366f1" emissiveIntensity={2} />
+            <mesh key={i} position={[Math.cos(angle) * radius, 0, Math.sin(angle) * radius]} rotation={[0, -angle, 0]}>
+              <boxGeometry args={[0.3, 0.05, 0.8]} />
+              <meshStandardMaterial color="#818cf8" emissive="#818cf8" emissiveIntensity={4} />
             </mesh>
           );
         })}
@@ -177,24 +176,29 @@ export default function MetaverseScreen({ onNavigate }: MetaverseScreenProps) {
       </AnimatePresence>
 
       {/* Metaverse Hero */}
-      <div className="px-6 pt-20 pb-16 bg-gradient-to-br from-indigo-950 via-slate-950 to-[#020617] relative overflow-hidden">
-        <div className="relative z-10">
-          <div className="inline-flex items-center gap-2 bg-indigo-500/10 px-4 py-2 rounded-full border border-indigo-500/20 mb-6">
-            <Sparkles size={14} className="text-indigo-400" />
-            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-300">Virtual africa ecosystem</span>
+      <div className="px-6 pt-24 pb-20 bg-gradient-to-br from-indigo-950 via-slate-950 to-[#020617] relative overflow-hidden">
+        <div className="relative z-10 text-center flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 bg-indigo-500/10 px-6 py-2 rounded-full border border-indigo-500/20 mb-8 backdrop-blur-sm">
+            <Sparkles size={16} className="text-indigo-400" />
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-indigo-300">Decentralised continent</span>
           </div>
-          <h1 className="text-6xl font-black tracking-tighter uppercase leading-[0.9] mb-6">Explore<br/><span className="text-indigo-500">The meta</span></h1>
-          <p className="text-slate-400 text-sm font-medium leading-relaxed max-w-xs mb-10">
-            Own digital land, build virtual experiences, and interact with the continent in a new decentralized dimension.
+          <h1 className="text-7xl font-black tracking-tighter uppercase leading-[0.85] mb-8 text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40">
+            Own the<br/><span className="text-indigo-500">Future</span>
+          </h1>
+          <p className="text-slate-400 text-sm font-medium leading-relaxed max-w-xs mb-12 opacity-80">
+            A new dimension for Africa. Trade virtual land, host events, and build your digital legacy in the AfriNode cosmos.
           </p>
           
-          <div className="flex gap-4">
+          <div className="flex flex-col gap-4 w-full max-w-[280px]">
             <button 
               onClick={() => setIsVREnabled(true)}
-              className="bg-indigo-600 text-white px-10 py-5 rounded-[24px] font-black text-xs uppercase tracking-widest shadow-2xl shadow-indigo-600/40 flex items-center gap-3 active:scale-95 transition-all"
+              className="bg-indigo-600 text-white w-full py-5 rounded-[24px] font-black text-xs uppercase tracking-[0.15em] shadow-[0_0_50px_rgba(79,70,229,0.3)] flex items-center justify-center gap-3 active:scale-95 transition-all hover:bg-indigo-500"
             >
               <Maximize2 size={20} />
-              Enter VR world
+              Launch visualizer
+            </button>
+            <button className="bg-white/5 backdrop-blur-md text-white/60 w-full py-5 rounded-[24px] font-black text-xs uppercase tracking-widest border border-white/10 hover:bg-white/10 transition-all">
+              Market guide
             </button>
           </div>
         </div>

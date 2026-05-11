@@ -23,12 +23,12 @@ export type Screen =
   | 'fundraiser'
   | 'ari-market'
   | 'ari-market-store'
-  | 'yearbook'
+  | 'heritage'
+  | 'arivote'
   | 'afrihero'
   | 'metaverse'
   | 'archive'
   | 'miniapps'
-  | 'reputation'
   | 'security'
   | 'more';
 

@@ -18,25 +18,25 @@ import {
 import { motion } from 'motion/react';
 import { Screen } from '../types';
 
-interface YearbookScreenProps {
+interface HeritageScreenProps {
   onNavigate: (screen: Screen) => void;
 }
 
-export default function MemoryNetworkScreen({ onNavigate }: YearbookScreenProps) {
+export default function HeritageScreen({ onNavigate }: HeritageScreenProps) {
   const memoryCircles = [
-    { title: 'Unilag class of 2015', type: 'Education', members: '1.2k', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbNNQk1_FwijWinaA3SY5ksMs_f48eebyAjlp8TvIlExB7Zr4bg5VorcBN9KGX25LNLmMErGe9vyc5ZG_-JNcspnkftMNwbJ5EG6iElrZr1IUcPNA9hfm_ZQolx_ywh45VSGc7wPg3CqNd2QQzoUJWvpJKd6XyEUSTyIu7L4IQTdtQsuiWbbsSfreEvokQvObIal6h1q58fmwBEHzixPP0vEm6lXU1go5fyMKnzzKoVOxaUohCvSrjT3iv1zZzLcemB3JY5KhzD7U' },
-    { title: 'Nysc oyo 2018', type: 'Service', members: '850', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA_exvvwk_lpu5Xk_VeDBqc_6BSCFmnW8FX6DwuarbJ-2j-NTS6l31wz-zdSdQTjLfxM50SsLrun3RF-AqgaBVY4BP5PCrpe1KQQgqioSZeHSoqgPhl_I0f8K3cwqrPAP7wzCzocBn0er11QnQEiHnyLj8djEAkPgqlgCLFLX1UL8PGhczcEA5uvSBp10YpNrhWSp7NkG75-ozrJ1X7TXrjOktPkqQVxzMgcQk4WWPqAxQ4Qchk0eHB5HMOgH1UcdjhN0q8gsUn-TM' },
-    { title: 'Kpmg lagos alumni', type: 'Work', members: '420', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCsK_pzZOJ14Vq8wb3iBogYinmyn-pDIuyAQj5Wvt4EsjazoGrdrZfuYR6Gi7KxJ0ZIeeJaLTy9StVmF3M-Wwo5EezRRRtvhYB0JwlHm3BeWBBDLD0pLqY1r1JJAQ96DXCAx4QL0WDTZmJmn1lLnXBf7JEyUEdnXxMi-6mJe5nnWDXxJsNR_3Yq28vQh7ANlQK6F223EWgoq2ZGSuFdGzRwdbkVte48UtJEAsE9SOAg7ZNBlPlTthJCOJRlXJW-pUq1sP-Krnopcbk' },
+    { title: 'Ife bronze artifacts', type: 'Heritage', members: '12.5k', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbNNQk1_FwijWinaA3SY5ksMs_f48eebyAjlp8TvIlExB7Zr4bg5VorcBN9KGX25LNLmMErGe9vyc5ZG_-JNcspnkftMNwbJ5EG6iElrZr1IUcPNA9hfm_ZQolx_ywh45VSGc7wPg3CqNd2QQzoUJWvpJKd6XyEUSTyIu7L4IQTdtQsuiWbbsSfreEvokQvObIal6h1q58fmwBEHzixPP0vEm6lXU1go5fyMKnzzKoVOxaUohCvSrjT3iv1zZzLcemB3JY5KhzD7U' },
+    { title: 'The Great Walls of Benin', type: 'History', members: '8.2k', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA_exvvwk_lpu5Xk_VeDBqc_6BSCFmnW8FX6DwuarbJ-2j-NTS6l31wz-zdSdQTjLfxM50SsLrun3RF-AqgaBVY4BP5PCrpe1KQQgqioSZeHSoqgPhl_I0f8K3cwqrPAP7wzCzocBn0er11QnQEiHnyLj8djEAkPgqlgCLFLX1UL8PGhczcEA5uvSBp10YpNrhWSp7NkG75-ozrJ1X7TXrjOktPkqQVxzMgcQk4WWPqAxQ4Qchk0eHB5HMOgH1UcdjhN0q8gsUn-TM' },
+    { title: 'Adinkra Symbolism', type: 'Culture', members: '15.1k', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCsK_pzZOJ14Vq8wb3iBogYinmyn-pDIuyAQj5Wvt4EsjazoGrdrZfuYR6Gi7KxJ0ZIeeJaLTy9StVmF3M-Wwo5EezRRRtvhYB0JwlHm3BeWBBDLD0pLqY1r1JJAQ96DXCAx4QL0WDTZmJmn1lLnXBf7JEyUEdnXxMi-6mJe5nnWDXxJsNR_3Yq28vQh7ANlQK6F223EWgoq2ZGSuFdGzRwdbkVte48UtJEAsE9SOAg7ZNBlPlTthJCOJRlXJW-pUq1sP-Krnopcbk' },
   ];
 
   return (
     <div className="flex flex-col bg-slate-50 min-h-screen">
       {/* Hero Section */}
-      <div className="px-6 pt-16 pb-12 bg-gradient-to-b from-sky-600 to-sky-800 text-white rounded-b-[4rem] shadow-2xl relative overflow-hidden">
+      <div className="px-6 pt-16 pb-12 bg-gradient-to-b from-amber-600 to-amber-800 text-white rounded-b-[4rem] shadow-2xl relative overflow-hidden">
         <div className="relative z-10">
-          <h1 className="text-4xl font-black tracking-tighter mb-3 leading-none">Memory network</h1>
-          <p className="text-sky-100 text-sm font-medium leading-relaxed opacity-90 max-w-xs">
-            Reconnect with your history. Relive the memories that shaped your journey across Africa.
+          <h1 className="text-4xl font-black tracking-tighter mb-3 leading-none">Afriheritage</h1>
+          <p className="text-amber-100 text-sm font-medium leading-relaxed opacity-90 max-w-xs">
+            Africa's digital archive. Preserving our history, artifacts, and cultural legacy for generations to come.
           </p>
         </div>
 
