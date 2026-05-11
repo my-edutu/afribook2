@@ -1,0 +1,13 @@
+{
+  "name": "Remix: AfriBook",
+  "description": "Africa\u0027s Official Record Archive and Social Community Platform featuring tribes, voting, and real-time cultural documentation.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "Social Networking",
+    "Digital Identity",
+    "Governance \u0026 Voting",
+    "Fintech"
+  ]
+}
