@@ -137,6 +137,36 @@ export default function HomeScreen({ onNavigate }: HomeScreenProps) {
       time: '5h ago',
       likes: '342',
       comments: '12'
+    },
+    {
+      id: 3,
+      user: { name: 'Zainab abiola', handle: '@zainab', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAPVLtZ9ebNSCsefwON9tx0ts5LmldUZe4kD1u4zS9PMxbjJ4O5uglg1WHhHKYApsOYZB50QKrSldgC1RLaTjErqoHZdtO-AK1szrOensz0B73S8NOEVXz0TDckAP_e-3WdzJ6VzCWegeyM7_k8nqdGZFHduhqVRZVxlGUD4Ld-ka0zo22oe0SJ8Y5RuwrQlyCRH2J3gUfoYX_ErsNZiDgJGpWAlaYduA3uiOQwJ-fqwYNCxJ-k8gFVVW7tCoC0I4lbXhlrjwzMYtI' },
+      content: 'Official: The largest Adinkra mural in West Africa is now verified! Proud to be part of the Digital Archivists tribe. 🎨📉',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA15Elxt6oFPrdhzcuSi0AEbU6AfgsuTczLG6OeFvGkr1zOxDXmTQvo3yG0uVW9EjwZO6GYAmnA-UoUrJFi7vBA2c5gefvjmIcBx38cj-HSsFoG1uLFE5awZZVIb9VGEmaWbdVsKc5CcigeI2XRG2igoMkZyKUZda7Bgw70UvfZTnueiPstukcUZktE21oTdqBjonVQmJWIry6sYLBPB47WQVCIMxFCjXLjIg9TQwMExWJELsqVzkQAKPXZT7pp33C-dMzuP1xz_R8',
+      location: 'Kumasi, ghana',
+      time: '8h ago',
+      likes: '4.5k',
+      comments: '156'
+    },
+    {
+      id: 4,
+      user: { name: 'Efe ovoke', handle: '@efe_records', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB2XtlpGxrCiPPSTW4VrTLvtkMbQT4TbliNiC_Kt5vqWef0ISzPjcKP_Aplz3_g5uVbZGJ7x_LpaMjr1RbpXcgn-UNKJDBBADO3u_4N_RIkzNO0ckrj8sW9W6N4Wtz1UgT7WHC5apJXrVdIPg9AltF76xY-iQ1hvHOK70yhOwWswH68CRbRD3NMVY8hc57jqgeiOULeRR2oWKI-jefaykjv3HkxSbTkU29MzB0WFR_CM_ZiGKozMjY1NzPlGSKrz-F92TXquBMF4es' },
+      content: 'The "Lagos Tech Founders" tribe gathering was electric! Amazing to see so many record-breakers in one room. Decentralised Africa is here. ⚡️🌍',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBVcG06xrmE1M93ppf47PsxRLhxfGF6lrjPvBtqmqo5R-hN5XeDTltitXsLUnyI-k34LbAyPNln30TkCciDj4cYbXqlqFydZKSkEJ3OFxKn9Mc0gamnjvEyBkAnT_OufwXg7A8PG6cem89PMF2NstSIQMQNr1Foc0IXQ-E5UvFKveM7gV1ficFnAJPNz29ESPME3fL3RG5HzkNecr0r0iztnH1p2xZddGN05onYScuKqjoaH6MzHkTmzRb4BnnM6pjAS-FoVNunh2o',
+      location: 'Victoria Island, lagos',
+      time: '12h ago',
+      likes: '890',
+      comments: '45'
+    },
+    {
+      id: 5,
+      user: { name: 'Chioma okoro', handle: '@chioma_art', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAMvbdbT_FInfR8uxmxmI7MuTPPRnz92srUYfLCZGODrfnnSNlvl0JnQ1jhuwLmFimYOa-8AYZ8s7HNG6QNjX2e3LGyfC1xr87hI2SDjE9VuH6sdwx82JQxkNsXHvYRcAYDbJywMj2mPea3OySYZmSBHz9yzaMH1j7hmlRarebGmB_qSp7WDqc43y5L4977lDvhMBZsTNImUU9FK_rEmTB1A5JmkzIieZqg7ZvCdF4auLVTferxfHmv-z30sH5JTZswOA3xZr7itAI' },
+      content: 'New batch of hand-woven Kente arriving at AriMarket tomorrow! Each piece is embedded with a digital identity record. 🧣✨',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB8vmTeHy5H8yzuIwYzT8byl_f48eebyAjlp8TvIlExB7Zr4bg5VorcBN9KGX25LNLmMErGe9vyc5ZG_-JNcspnkftMNwbJ5EG6iElrZr1IUcPNA9hfm_ZQolx_ywh45VSGc7wPg3CqNd2QQzoUJWvpJKd6XyEUSTyIu7L4IQTdtQsuiWbbsSfreEvokQvObIal6h1q58fmwBEHzixPP0vEm6lXU1go5fyMKnzzKoVOxaUohCvSrjT3iv1zZzLcemB3JY5KhzD7U',
+      location: 'Nairobi, kenya',
+      time: '1d ago',
+      likes: '2.1k',
+      comments: '230'
     }
   ];
 
