@@ -137,7 +137,7 @@ export default function MetaverseScreen({ onNavigate }: MetaverseScreenProps) {
             <div className="absolute top-12 right-8 z-[110] flex gap-4">
                <button 
                 onClick={() => setIsVREnabled(false)}
-                className="size-16 rounded-full bg-white/5 backdrop-blur-3xl flex items-center justify-center text-white border border-white/10 hover:bg-white/10 transition-all shadow-2xl"
+                className="size-16 rounded-full bg-white/5 backdrop-blur-3xl flex items-center justify-center text-white border border-white/10 hover:bg-white/10 transition-colors shadow-2xl"
                >
                  <X size={32} />
                </button>
@@ -146,7 +146,7 @@ export default function MetaverseScreen({ onNavigate }: MetaverseScreenProps) {
             <div className="absolute top-12 left-8 z-[110]">
                <div className="flex items-center gap-4 bg-indigo-600 px-6 py-3 rounded-full shadow-[0_0_40px_rgba(79,70,229,0.4)]">
                   <Globe size={20} className="animate-spin-slow" />
-                  <span className="text-[10px] font-black uppercase tracking-[0.2em]">Live metaverse terminal</span>
+                  <span className="text-[10px] font-extrabold tracking-wide">Live metaverse terminal</span>
                </div>
             </div>
 
@@ -154,9 +154,9 @@ export default function MetaverseScreen({ onNavigate }: MetaverseScreenProps) {
                <div className="bg-white/5 backdrop-blur-2xl p-6 rounded-[32px] border border-white/10 space-y-4 max-w-xs shadow-2xl">
                   <div className="flex items-center gap-3">
                     <div className="size-3 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-[10px] font-black uppercase tracking-widest text-emerald-400">Connection stable</span>
+                    <span className="text-[10px] font-extrabold tracking-wide text-emerald-400">Connection stable</span>
                   </div>
-                  <h4 className="text-xl font-black tracking-tight">AfriNode cosmos</h4>
+                  <h4 className="text-xl font-extrabold tracking-tight">AfriNode cosmos</h4>
                   <p className="text-white/40 text-xs font-medium leading-relaxed italic">"Welcome to the decentralized collective. Explore the new dimension of the continent."</p>
                </div>
             </div>
@@ -168,8 +168,8 @@ export default function MetaverseScreen({ onNavigate }: MetaverseScreenProps) {
             </Canvas>
 
             <div className="absolute bottom-12 right-8 z-[110] flex flex-col items-end gap-3">
-               <button className="bg-white/10 backdrop-blur-xl px-8 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest border border-white/10 hover:bg-white/20 transition-all">Teleport home</button>
-               <button className="bg-primary text-white px-8 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-xl shadow-primary/20">Buy this plot</button>
+               <button className="bg-white/10 backdrop-blur-xl px-8 py-4 rounded-2xl text-[10px] font-extrabold tracking-wide border border-white/10 hover:bg-white/20 transition-colors">Teleport home</button>
+               <button className="bg-primary text-white px-8 py-4 rounded-2xl text-[10px] font-extrabold tracking-wide shadow-xl shadow-primary/20">Buy this plot</button>
             </div>
           </motion.div>
         )}
@@ -180,9 +180,9 @@ export default function MetaverseScreen({ onNavigate }: MetaverseScreenProps) {
         <div className="relative z-10 text-center flex flex-col items-center">
           <div className="inline-flex items-center gap-2 bg-indigo-500/10 px-6 py-2 rounded-full border border-indigo-500/20 mb-8 backdrop-blur-sm">
             <Sparkles size={16} className="text-indigo-400" />
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-indigo-300">Decentralised continent</span>
+            <span className="text-[10px] font-extrabold tracking-wide text-indigo-300">Decentralised continent</span>
           </div>
-          <h1 className="text-7xl font-black tracking-tighter uppercase leading-[0.85] mb-8 text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40">
+          <h1 className="text-7xl font-extrabold tracking-tight leading-[0.85] mb-8 text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40">
             Own the<br/><span className="text-indigo-500">Future</span>
           </h1>
           <p className="text-slate-400 text-sm font-medium leading-relaxed max-w-xs mb-12 opacity-80">
@@ -192,12 +192,12 @@ export default function MetaverseScreen({ onNavigate }: MetaverseScreenProps) {
           <div className="flex flex-col gap-4 w-full max-w-[280px]">
             <button 
               onClick={() => setIsVREnabled(true)}
-              className="bg-indigo-600 text-white w-full py-5 rounded-[24px] font-black text-xs uppercase tracking-[0.15em] shadow-[0_0_50px_rgba(79,70,229,0.3)] flex items-center justify-center gap-3 active:scale-95 transition-all hover:bg-indigo-500"
+              className="bg-indigo-600 text-white w-full py-5 rounded-[24px] font-extrabold text-xs tracking-[0.15em] shadow-[0_0_50px_rgba(79,70,229,0.3)] flex items-center justify-center gap-3 active:scale-95 transition-colors hover:bg-indigo-500"
             >
               <Maximize2 size={20} />
               Launch visualizer
             </button>
-            <button className="bg-white/5 backdrop-blur-md text-white/60 w-full py-5 rounded-[24px] font-black text-xs uppercase tracking-widest border border-white/10 hover:bg-white/10 transition-all">
+            <button className="bg-white/5 backdrop-blur-md text-white/60 w-full py-5 rounded-[24px] font-extrabold text-xs tracking-wide border border-white/10 hover:bg-white/10 transition-colors">
               Market guide
             </button>
           </div>
@@ -211,7 +211,7 @@ export default function MetaverseScreen({ onNavigate }: MetaverseScreenProps) {
       <main className="flex-1 px-6 pt-10 pb-32">
         <div className="flex items-center gap-4 mb-8 overflow-x-auto no-scrollbar pb-2">
            {['Land marketplace', 'Avatars', 'Events', 'Auctions'].map((tab, i) => (
-             <button key={i} className={`whitespace-nowrap px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${i === 0 ? 'bg-white text-slate-900' : 'bg-slate-900 text-white/40 border border-white/5'}`}>
+             <button key={i} className={`whitespace-nowrap px-6 py-2 rounded-full text-[10px] font-extrabold tracking-wide transition-colors ${i === 0 ? 'bg-white text-slate-900' : 'bg-slate-900 text-white/40 border border-white/5'}`}>
                 {tab}
              </button>
            ))}
@@ -221,8 +221,8 @@ export default function MetaverseScreen({ onNavigate }: MetaverseScreenProps) {
         <section className="mb-12">
           <div className="flex justify-between items-end mb-8">
             <div>
-              <h2 className="text-3xl font-black tracking-tight leading-none text-white">Market listings</h2>
-              <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-2 ml-1">Verified decentralized parcels</p>
+              <h2 className="text-3xl font-extrabold tracking-tight leading-none text-white">Market listings</h2>
+              <p className="text-[10px] font-bold text-slate-500 tracking-wide mt-2 ml-1">Verified decentralized parcels</p>
             </div>
           </div>
           
@@ -230,23 +230,23 @@ export default function MetaverseScreen({ onNavigate }: MetaverseScreenProps) {
             {landTypes.map((land, i) => (
               <div 
                 key={i}
-                className="bg-white/5 p-6 rounded-[32px] border border-white/5 flex items-center justify-between group cursor-pointer hover:bg-white/10 hover:border-indigo-500/30 transition-all active:scale-[0.98] shadow-sm backdrop-blur-sm"
+                className="bg-white/5 p-6 rounded-[32px] border border-white/5 flex items-center justify-between group cursor-pointer hover:bg-white/10 hover:border-indigo-500/30 transition-colors active:scale-[0.98] shadow-sm backdrop-blur-sm"
               >
                 <div className="flex items-center gap-6">
                   <div className={`size-16 rounded-3xl ${land.color} flex items-center justify-center shadow-inner`}>
                     <MapIcon size={28} />
                   </div>
                   <div>
-                    <h4 className="font-black text-white uppercase tracking-tight text-base mb-1">{land.title}</h4>
-                    <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{land.desc}</p>
+                    <h4 className="font-extrabold text-white tracking-tight text-base mb-1">{land.title}</h4>
+                    <p className="text-[10px] font-bold text-slate-500 tracking-wide">{land.desc}</p>
                   </div>
                 </div>
                 <div className="text-right">
                   <div className="flex items-center gap-2 justify-end mb-2">
                     <div className="size-2 rounded-full bg-emerald-500" />
-                    <span className="text-emerald-400 text-[10px] font-black uppercase">{land.trend}</span>
+                    <span className="text-emerald-400 text-[10px] font-extrabold">{land.trend}</span>
                   </div>
-                  <p className="font-black text-xl text-white tracking-tight">{land.price}</p>
+                  <p className="font-extrabold text-xl text-white tracking-tight">{land.price}</p>
                 </div>
               </div>
             ))}
@@ -257,9 +257,9 @@ export default function MetaverseScreen({ onNavigate }: MetaverseScreenProps) {
         <section className="grid grid-cols-2 gap-5 mb-12">
           <div className="bg-gradient-to-br from-slate-900 to-indigo-950 p-8 rounded-[40px] border border-white/5 shadow-2xl relative overflow-hidden">
             <div className="relative z-10">
-              <p className="text-white/40 text-[10px] font-black uppercase tracking-widest mb-3">Parcels sold</p>
-              <h4 className="text-2xl font-black">12.4k</h4>
-              <div className="mt-4 flex items-center gap-2 text-indigo-400 text-[10px] font-black uppercase">
+              <p className="text-white/40 text-[10px] font-extrabold tracking-wide mb-3">Parcels sold</p>
+              <h4 className="text-2xl font-extrabold">12.4k</h4>
+              <div className="mt-4 flex items-center gap-2 text-indigo-400 text-[10px] font-extrabold">
                 <TrendingUp size={14} />
                 <span>+4% week</span>
               </div>
@@ -268,9 +268,9 @@ export default function MetaverseScreen({ onNavigate }: MetaverseScreenProps) {
           </div>
           <div className="bg-gradient-to-br from-slate-900 to-amber-950 p-8 rounded-[40px] border border-white/5 shadow-2xl relative overflow-hidden">
             <div className="relative z-10">
-              <p className="text-white/40 text-[10px] font-black uppercase tracking-widest mb-3">Volume pool</p>
-              <h4 className="text-2xl font-black">8.1M</h4>
-              <div className="mt-4 flex items-center gap-2 text-amber-400 text-[10px] font-black uppercase">
+              <p className="text-white/40 text-[10px] font-extrabold tracking-wide mb-3">Volume pool</p>
+              <h4 className="text-2xl font-extrabold">8.1M</h4>
+              <div className="mt-4 flex items-center gap-2 text-amber-400 text-[10px] font-extrabold">
                 <Coins size={14} />
                 <span>AFR total</span>
               </div>

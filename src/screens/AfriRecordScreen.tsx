@@ -15,11 +15,11 @@ interface HomeScreenProps {
 export default function AfriRecordScreen({ onNavigate }: HomeScreenProps) {
   const categories = [
     { id: 'discover', label: 'All Records', active: true },
-    { id: 'discover', label: 'Sports', icon: '⚽' },
-    { id: 'discover', label: 'Innovation', icon: '💡' },
-    { id: 'discover', label: 'Culture', icon: '🎭' },
-    { id: 'discover', label: 'Youth', icon: '👥' },
-    { id: 'discover', label: 'Agriculture', icon: '🚜' },
+    { id: 'discover', label: 'Sports' },
+    { id: 'discover', label: 'Innovation' },
+    { id: 'discover', label: 'Culture' },
+    { id: 'discover', label: 'Youth' },
+    { id: 'discover', label: 'Agriculture' },
   ];
 
   return (
@@ -27,7 +27,7 @@ export default function AfriRecordScreen({ onNavigate }: HomeScreenProps) {
       {/* Hero Section */}
       <div className="px-4 pt-6 pb-2">
         <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 leading-tight">
-          Africa’s Official <span className="text-primary">Record Archive</span>
+          Africa's Official <span className="text-primary">Record Archive</span>
         </h1>
         <p className="mt-2 text-slate-600 text-sm">
           Documenting excellence, heritage, and the extraordinary across the continent.
@@ -46,7 +46,6 @@ export default function AfriRecordScreen({ onNavigate }: HomeScreenProps) {
                 : 'bg-primary/10 text-slate-700 hover:bg-primary/20'
             }`}
           >
-            {cat.icon && <span>{cat.icon}</span>}
             <p>{cat.label}</p>
           </button>
         ))}
@@ -56,14 +55,14 @@ export default function AfriRecordScreen({ onNavigate }: HomeScreenProps) {
       <div className="px-4 py-2">
         <button 
           onClick={() => onNavigate('claim-new-record')}
-          className="w-full flex items-center justify-between gap-3 bg-white border-2 border-dashed border-primary/20 p-6 rounded-3xl group hover:border-primary/40 transition-all shadow-sm"
+          className="w-full flex items-center justify-between gap-3 bg-white border-2 border-dashed border-primary/20 p-6 rounded-3xl group hover:border-primary/40 transition-colors shadow-sm"
         >
           <div className="flex items-center gap-4 text-left">
             <div className="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
               <Trophy size={24} />
             </div>
             <div>
-              <h3 className="font-black text-slate-900 uppercase tracking-tight">Claim a Record</h3>
+              <h3 className="font-extrabold text-slate-900 tracking-tight">Claim a Record</h3>
               <p className="text-xs text-slate-500 font-bold">Document your achievement</p>
             </div>
           </div>
@@ -98,7 +97,7 @@ export default function AfriRecordScreen({ onNavigate }: HomeScreenProps) {
                   alt={record.title} 
                   className="h-full w-full object-cover"
                 />
-                <div className={`absolute top-3 right-3 flex items-center gap-1 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white ${
+                <div className={`absolute top-3 right-3 flex items-center gap-1 rounded-full px-3 py-1 text-[10px] font-bold tracking-wider text-white ${
                   record.status === 'verified' ? 'bg-green-500' : 
                   record.status === 'pending' ? 'bg-amber-500' : 'bg-red-500'
                 }`}>
@@ -123,7 +122,7 @@ export default function AfriRecordScreen({ onNavigate }: HomeScreenProps) {
                 </p>
                 <div className="flex items-center justify-between border-t border-primary/5 pt-4">
                   <div className="flex flex-col">
-                    <span className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Verification Score</span>
+                    <span className="text-[10px] tracking-wide text-slate-500 font-bold">Verification Score</span>
                     <div className="flex items-center gap-2">
                       <div className="h-2 w-24 overflow-hidden rounded-full bg-slate-200">
                         <div 
@@ -160,7 +159,7 @@ export default function AfriRecordScreen({ onNavigate }: HomeScreenProps) {
       <div className="fixed bottom-28 right-6 z-30">
         <button 
           onClick={() => onNavigate('claim-new-record')}
-          className="w-16 h-16 bg-primary rounded-full shadow-2xl shadow-primary/40 border-4 border-white flex items-center justify-center text-white active:scale-95 transition-all hover:scale-105"
+          className="w-16 h-16 bg-primary rounded-full shadow-2xl shadow-primary/40 border-4 border-white flex items-center justify-center text-white active:scale-95 transition-colors hover:scale-105"
         >
           <Plus size={36} strokeWidth={3} />
         </button>

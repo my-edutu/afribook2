@@ -27,7 +27,7 @@ export default function ProfileScreen({ onNavigate }: ProfileScreenProps) {
       <section className="relative px-6 pt-12 pb-8 bg-white border-b border-slate-50">
         <div className="flex justify-between items-start mb-8">
           <div className="relative group">
-            <div className="size-28 rounded-[40px] border-4 border-primary/10 p-1.5 shadow-xl transition-all group-hover:scale-105">
+            <div className="size-28 rounded-[40px] border-4 border-primary/10 p-1.5 shadow-xl transition-colors group-hover:scale-105">
               <img 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYcG24Dieu84a3gmMn85e5BjbaF9vnbx5O6VKycbLNsSuEZtwI-9vn7p9Eo9EX8ATUs7wdAXSllcaK28WG5KMp08jOA2SagxmnxsI2wl95LLSiy0a6fr4Xo3CzifS7z86lE2Myaiduu0Xpvdc6vh2SmhXxHxUfDNBy6nOQltZOFtRDohhkW0UHE1XGHMHtwjQ-IJOYYialORWdwChDCX7dJTOp0OTYsdio87oL_Dp-yodBVOfHQunDDCI_7adeRosZVWbhfMaFev4" 
                 alt="Profile" 
@@ -39,12 +39,12 @@ export default function ProfileScreen({ onNavigate }: ProfileScreenProps) {
             </div>
           </div>
           <div className="flex gap-3">
-            <button className="p-3 bg-slate-50 rounded-2xl text-slate-400 hover:text-slate-900 transition-all">
+            <button className="p-3 bg-slate-50 rounded-2xl text-slate-400 hover:text-slate-900 transition-colors">
               <Share2 size={20} />
             </button>
             <button 
               onClick={() => onNavigate('settings')}
-              className="p-3 bg-slate-50 rounded-2xl text-slate-400 hover:text-primary transition-all"
+              className="p-3 bg-slate-50 rounded-2xl text-slate-400 hover:text-primary transition-colors"
             >
               <Settings size={20} />
             </button>
@@ -53,15 +53,15 @@ export default function ProfileScreen({ onNavigate }: ProfileScreenProps) {
 
         <button 
           onClick={() => {}} // User can click to view full profile details if needed
-          className="w-full flex items-center justify-between group transition-all"
+          className="w-full flex items-center justify-between group transition-colors"
         >
           <div className="text-left">
-            <h1 className="text-3xl font-black tracking-tighter text-slate-900 mb-1">Kofi mensah</h1>
-            <p className="text-slate-400 text-sm font-bold uppercase tracking-tight flex items-center gap-1.5">
-              @kofimensah • <MapPin size={12} /> Accra, ghana
+            <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 mb-1">Kofi mensah</h1>
+            <p className="text-slate-400 text-sm font-bold tracking-tight flex items-center gap-1.5">
+              @kofimensah / <MapPin size={12} /> Accra, Ghana
             </p>
           </div>
-          <div className="size-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 group-hover:text-primary group-hover:translate-x-1 transition-all">
+          <div className="size-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 group-hover:text-primary group-hover:translate-x-1 transition-colors">
             <ChevronRight size={24} />
           </div>
         </button>
@@ -73,18 +73,18 @@ export default function ProfileScreen({ onNavigate }: ProfileScreenProps) {
 
       {/* Quick Access Grid */}
       <section className="px-6 py-10">
-        <h2 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-6 ml-1">Quick access</h2>
+        <h2 className="text-[10px] font-extrabold text-slate-400 tracking-wide mb-6 ml-1">Quick access</h2>
         <div className="grid grid-cols-2 gap-4">
           {quickAccess.map((item) => (
             <button 
               key={item.id}
               onClick={() => onNavigate(item.id as Screen)}
-              className="flex flex-col items-start p-6 bg-white rounded-[32px] border border-slate-50 shadow-sm hover:shadow-md transition-all active:scale-[0.98] group"
+              className="flex flex-col items-start p-6 bg-white rounded-[32px] border border-slate-50 shadow-sm hover:shadow-md transition-colors active:scale-[0.98] group"
             >
               <div className={`size-12 rounded-2xl ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                 <item.icon size={22} />
               </div>
-              <span className="text-sm font-black text-slate-900 tracking-tight">{item.label}</span>
+              <span className="text-sm font-extrabold text-slate-900 tracking-tight">{item.label}</span>
             </button>
           ))}
         </div>
@@ -97,9 +97,9 @@ export default function ProfileScreen({ onNavigate }: ProfileScreenProps) {
             <div className="size-12 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
               <Trophy size={24} className="text-amber-400" />
             </div>
-            <h3 className="text-xl font-black tracking-tight mb-2">Verified achievements</h3>
+            <h3 className="text-xl font-extrabold tracking-tight mb-2">Verified achievements</h3>
             <p className="text-white/60 text-xs font-medium leading-relaxed mb-6">You have 12 verified national records. Your expertise in Adumu dance is unmatched.</p>
-            <button className="bg-primary text-white px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest shadow-xl shadow-primary/20 active:scale-95 transition-all">View all</button>
+            <button className="bg-primary text-white px-6 py-3 rounded-xl text-[10px] font-extrabold tracking-wide shadow-xl shadow-primary/20 active:scale-95 transition-colors">View all</button>
           </div>
           <div className="absolute -right-12 -bottom-12 text-white/5 transform rotate-12">
             <Award size={200} />

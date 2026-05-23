@@ -3,9 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import Layout from './components/Layout';
 import HomeScreen from './screens/HomeScreen';
+import SearchScreen from './screens/SearchScreen';
 import AfriRecordScreen from './screens/AfriRecordScreen';
 import TribesScreen from './screens/TribesScreen';
 import WatchScreen from './screens/WatchScreen';
@@ -22,12 +23,13 @@ import ShowroomAIScreen from './screens/ShowroomAIScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import HeritageScreen from './screens/HeritageScreen';
 import AriVoteScreen from './screens/AriVoteScreen';
-import MetaverseScreen from './screens/MetaverseScreen';
 import AfriHeroScreen from './screens/AfriHeroScreen';
 import MiniAppCenter from './screens/MiniAppCenter';
 import MoreScreen from './screens/MoreScreen';
 import { Screen } from './types';
 import { Plus, Shield, HelpCircle, Archive, Globe, Gamepad2, GraduationCap } from 'lucide-react';
+
+const MetaverseScreen = React.lazy(() => import('./screens/MetaverseScreen'));
 
 export default function App() {
   const [activeScreen, setActiveScreen] = useState<Screen>('home');
@@ -36,6 +38,8 @@ export default function App() {
     switch (activeScreen) {
       case 'home':
         return <HomeScreen onNavigate={setActiveScreen} />;
+      case 'search':
+        return <SearchScreen onNavigate={setActiveScreen} />;
       case 'afrirecord':
         return <AfriRecordScreen onNavigate={setActiveScreen} />;
       case 'tribes':
@@ -61,7 +65,11 @@ export default function App() {
       case 'arivote':
         return <AriVoteScreen onNavigate={setActiveScreen} />;
       case 'metaverse':
-        return <MetaverseScreen onNavigate={setActiveScreen} />;
+        return (
+          <Suspense fallback={<div className="min-h-screen bg-[#020617]" />}>
+            <MetaverseScreen onNavigate={setActiveScreen} />
+          </Suspense>
+        );
       case 'afrihero':
       case 'archive':
         return <AfriHeroScreen onNavigate={setActiveScreen} />;

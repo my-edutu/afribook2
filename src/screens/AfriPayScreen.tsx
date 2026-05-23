@@ -4,139 +4,122 @@
  */
 
 import React from 'react';
-import { 
-  Wallet, 
-  ArrowUpRight, 
-  ArrowDownLeft, 
-  Plus, 
-  Search, 
-  History, 
-  CreditCard, 
-  ShieldCheck, 
+import {
+  ArrowDownLeft,
+  ArrowUpRight,
+  CreditCard,
+  History,
   MoreHorizontal,
+  Plus,
+  ShieldCheck,
   TrendingUp,
-  TrendingDown
+  Wallet,
 } from 'lucide-react';
-import { Screen } from '../types';
 import { MOCK_TRANSACTIONS } from '../constants';
+import { ActionButton, IconButton, MobilePage, SectionHeader, SurfaceCard } from '../components/MobileUI';
+import { Screen } from '../types';
 
 interface AfriPayScreenProps {
   onNavigate: (screen: Screen) => void;
 }
 
-export default function AfriPayScreen({ onNavigate }: AfriPayScreenProps) {
+export default function AfriPayScreen(_: AfriPayScreenProps) {
   return (
-    <div className="flex flex-col pb-8">
-      {/* Wallet Card */}
-      <section className="px-4 py-6">
-        <div className="relative overflow-hidden bg-gradient-to-br from-primary to-amber-600 rounded-[20px] p-6 text-white shadow-2xl shadow-primary/30">
+    <MobilePage>
+      <section className="px-6 py-6">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary to-amber-600 p-6 text-white shadow-xl shadow-primary/20">
           <div className="relative z-10">
-            <div className="flex justify-between items-start mb-8">
+            <div className="mb-8 flex items-start justify-between">
               <div className="flex items-center gap-2">
-                <div className="bg-white/20 p-2 rounded-lg backdrop-blur-md">
+                <div className="rounded-xl bg-white/20 p-2 backdrop-blur-md">
                   <Wallet size={20} />
                 </div>
-                <span className="text-sm font-bold tracking-tight">AfriPay wallet</span>
+                <span className="text-sm font-bold">AfriPay Wallet</span>
               </div>
-              <button className="bg-white/20 p-2 rounded-full backdrop-blur-md">
-                <MoreHorizontal size={20} />
-              </button>
+              <IconButton label="More wallet options" icon={MoreHorizontal} className="bg-white/20 text-white backdrop-blur-md hover:bg-white/30" />
             </div>
-            
+
             <div className="mb-8">
-              <p className="text-white/80 text-xs font-medium mb-1">Total balance</p>
-              <h2 className="text-4xl font-extrabold tracking-tight">₦4,450,200.80</h2>
-              <div className="flex items-center gap-1 mt-2 text-green-300 text-xs font-bold">
+              <p className="mb-1 text-xs font-medium text-white/80">Total balance</p>
+              <h2 className="text-3xl font-extrabold tracking-tight tabular-nums">NGN 4,450,200.80</h2>
+              <div className="mt-2 flex items-center gap-1 text-xs font-bold text-green-300">
                 <TrendingUp size={14} />
                 +12.5% this month
               </div>
             </div>
 
             <div className="flex gap-3">
-              <button className="flex-1 bg-white text-primary py-3 rounded-xl font-bold text-sm shadow-lg active:scale-95 transition-transform flex items-center justify-center gap-2">
+              <ActionButton tone="light" className="flex flex-1 items-center justify-center gap-2 text-primary">
                 <Plus size={18} />
-                Add funds
-              </button>
-              <button className="flex-1 bg-white/20 backdrop-blur-md text-white py-3 rounded-xl font-bold text-sm border border-white/20 active:scale-95 transition-transform flex items-center justify-center gap-2">
+                Add Funds
+              </ActionButton>
+              <ActionButton tone="ghost" className="flex flex-1 items-center justify-center gap-2 border border-white/20 bg-white/20 text-white backdrop-blur-md hover:bg-white/30">
                 <ArrowUpRight size={18} />
                 Send
-              </button>
+              </ActionButton>
             </div>
           </div>
-          
-          {/* Decorative Circles */}
-          <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
-          <div className="absolute -left-10 -top-10 w-32 h-32 bg-amber-400/20 rounded-full blur-2xl"></div>
+          <div className="absolute -right-10 -bottom-10 h-48 w-48 rounded-full bg-white/10 blur-3xl" />
+          <div className="absolute -left-10 -top-10 h-32 w-32 rounded-full bg-amber-400/20 blur-2xl" />
         </div>
       </section>
 
-      {/* Quick Actions */}
-      <section className="px-4 mb-8">
+      <section className="mb-8 px-6">
         <div className="grid grid-cols-4 gap-4">
           {[
             { label: 'Pay', icon: CreditCard, color: 'bg-blue-100 text-blue-600' },
             { label: 'Request', icon: ArrowDownLeft, color: 'bg-green-100 text-green-600' },
-            { label: 'Tribe fund', icon: ShieldCheck, color: 'bg-amber-100 text-amber-600' },
+            { label: 'Tribe Fund', icon: ShieldCheck, color: 'bg-amber-100 text-amber-600' },
             { label: 'History', icon: History, color: 'bg-slate-100 text-slate-600' },
-          ].map((action, i) => (
-            <button key={i} className="flex flex-col items-center gap-2">
-              <div className={`size-14 rounded-[20px] flex items-center justify-center shadow-sm ${action.color}`}>
+          ].map((action) => (
+            <button key={action.label} type="button" className="flex min-w-0 flex-col items-center gap-2 rounded-2xl p-1 transition-transform active:scale-[0.98]">
+              <div className={`flex size-14 items-center justify-center rounded-2xl shadow-sm ${action.color}`}>
                 <action.icon size={24} />
               </div>
-              <span className="text-[11px] font-bold text-slate-600">{action.label}</span>
+              <span className="w-full truncate text-center text-[11px] font-bold text-slate-600">{action.label}</span>
             </button>
           ))}
         </div>
       </section>
 
-      {/* Recent Transactions */}
-      <section className="px-4">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-bold">Recent transactions</h2>
-          <button className="text-primary text-sm font-semibold">View all</button>
-        </div>
-
+      <section className="px-6">
+        <SectionHeader title="Recent Transactions" action={<button type="button" className="text-sm font-bold text-primary">View All</button>} />
         <div className="space-y-3">
           {MOCK_TRANSACTIONS.map((tx) => (
-            <div key={tx.id} className="bg-white p-4 rounded-[20px] flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <div className={`size-12 rounded-xl flex items-center justify-center ${
-                  tx.type === 'credit' ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'
-                }`}>
+            <SurfaceCard key={tx.id} className="flex items-center justify-between p-4">
+              <div className="flex min-w-0 items-center gap-4">
+                <div className={`flex size-12 shrink-0 items-center justify-center rounded-xl ${tx.type === 'credit' ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'}`}>
                   {tx.type === 'credit' ? <ArrowDownLeft size={24} /> : <ArrowUpRight size={24} />}
                 </div>
-                <div>
-                  <h4 className="font-bold text-sm">{tx.title}</h4>
-                  <p className="text-[11px] text-slate-500 font-medium">{tx.date}</p>
+                <div className="min-w-0">
+                  <h4 className="truncate text-sm font-bold text-slate-950">{tx.title}</h4>
+                  <p className="text-[11px] font-medium text-slate-500">{tx.date}</p>
                 </div>
               </div>
-              <div className="text-right">
-                <p className={`font-bold text-sm ${
-                  tx.type === 'credit' ? 'text-green-600' : 'text-slate-900'
-                }`}>₦{tx.amount.replace('$', '')}</p>
+              <div className="shrink-0 text-right">
+                <p className={`text-sm font-bold tabular-nums ${tx.type === 'credit' ? 'text-green-600' : 'text-slate-900'}`}>NGN {tx.amount.replace('$', '')}</p>
                 {tx.verified && (
-                  <span className="text-[10px] font-bold text-primary flex items-center justify-end gap-0.5">
+                  <span className="flex items-center justify-end gap-0.5 text-[10px] font-bold text-primary">
                     <ShieldCheck size={10} /> Verified
                   </span>
                 )}
               </div>
-            </div>
+            </SurfaceCard>
           ))}
         </div>
       </section>
 
-      {/* Security Banner */}
-      <section className="px-4 mt-8">
-        <div className="bg-slate-900 rounded-[20px] p-5 text-white flex items-center gap-4 shadow-xl">
-          <div className="bg-primary/20 p-3 rounded-xl">
+      <section className="mt-8 px-6">
+        <div className="flex items-center gap-4 rounded-3xl bg-slate-900 p-5 text-white shadow-xl">
+          <div className="rounded-xl bg-primary/20 p-3">
             <ShieldCheck size={28} className="text-primary" />
           </div>
           <div>
-            <h3 className="font-bold text-sm text-white">Blockchain secured</h3>
+            <h3 className="text-sm font-bold text-white">Blockchain Secured</h3>
             <p className="text-xs text-slate-400">All transactions are encrypted and recorded on the AfriChain ledger.</p>
           </div>
         </div>
       </section>
-    </div>
+    </MobilePage>
   );
 }

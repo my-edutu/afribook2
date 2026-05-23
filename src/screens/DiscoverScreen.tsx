@@ -56,9 +56,8 @@ export default function DiscoverScreen({ onNavigate }: DiscoverScreenProps) {
               <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
               <input 
                 type="text" 
-                placeholder="Search snap africa map..." 
-                autoFocus
-                className="w-full h-12 bg-slate-100 rounded-[20px] pl-12 pr-4 text-sm font-medium outline-none"
+                placeholder="Search snap africa map…" 
+                className="w-full h-12 bg-slate-100 rounded-[20px] pl-12 pr-4 text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30"
               />
             </div>
           </motion.div>
@@ -69,10 +68,10 @@ export default function DiscoverScreen({ onNavigate }: DiscoverScreenProps) {
       <section className="px-6 pt-10 pb-4 space-y-8">
         <div className="flex items-center justify-between">
           <div>
-             <h2 className="text-2xl font-black text-slate-900 tracking-tight leading-none">Snap africa</h2>
-             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2">Ai recommended journey</p>
+             <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight leading-none">Snap africa</h2>
+             <p className="text-[10px] font-bold text-slate-400 tracking-wide mt-2">Ai recommended journey</p>
           </div>
-          <span className="text-[10px] font-black text-secondary uppercase tracking-widest flex items-center gap-1 bg-secondary/5 px-4 py-2 rounded-xl">
+          <span className="text-[10px] font-extrabold text-secondary tracking-wide flex items-center gap-1 bg-secondary/5 px-4 py-2 rounded-xl">
             <Sparkles size={14} fill="currentColor" /> Verified insights
           </span>
         </div>
@@ -100,9 +99,9 @@ export default function DiscoverScreen({ onNavigate }: DiscoverScreenProps) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
               <div className="absolute bottom-8 left-8 right-8">
-                <span className="text-primary font-black text-[10px] uppercase tracking-widest mb-2 block">{card.tag}</span>
-                <h3 className="text-xl font-black text-white mb-4 leading-tight lowercase first-letter:uppercase">{card.title}</h3>
-                <button className="bg-white text-slate-900 px-6 py-3 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:scale-105 transition-transform active:scale-95 shadow-xl shadow-black/20">
+                <span className="text-primary font-extrabold text-[10px] tracking-wide mb-2 block">{card.tag}</span>
+                <h3 className="text-xl font-extrabold text-white mb-4 leading-tight lowercase first-letter:uppercase">{card.title}</h3>
+                <button className="bg-white text-slate-900 px-6 py-3 rounded-2xl font-extrabold text-[10px] tracking-wide hover:scale-105 transition-transform active:scale-95 shadow-xl shadow-black/20">
                   Join experience
                 </button>
               </div>
@@ -113,29 +112,29 @@ export default function DiscoverScreen({ onNavigate }: DiscoverScreenProps) {
 
       {/* For Your Journey */}
       <section className="px-6 py-10 space-y-8">
-        <h2 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] ml-2">For your journey</h2>
+        <h2 className="text-[10px] font-extrabold text-slate-400 tracking-wide ml-2">For your journey</h2>
         <div className="grid grid-cols-1 gap-4">
-          <div className="bg-secondary/5 border border-secondary/10 p-10 rounded-[48px] relative overflow-hidden group active:scale-[0.99] transition-all">
+          <div className="bg-secondary/5 border border-secondary/10 p-10 rounded-[48px] relative overflow-hidden group active:scale-[0.99] transition-colors">
             <div className="relative z-10 flex flex-col gap-6">
               <div className="size-16 rounded-3xl bg-secondary/10 flex items-center justify-center text-secondary shadow-inner">
                 <Coins size={32} />
               </div>
               <div>
-                <h4 className="text-2xl font-black text-slate-900 leading-tight">Afripay tips</h4>
+                <h4 className="text-2xl font-extrabold text-slate-900 leading-tight">Afripay tips</h4>
                 <p className="text-slate-500 text-sm font-medium mt-2 leading-relaxed">Save 15% on tickets when using your local wallet today.</p>
               </div>
             </div>
           </div>
-          <div className="bg-emerald-50 border border-emerald-100 p-10 rounded-[48px] relative overflow-hidden group active:scale-[0.99] transition-all">
+          <div className="bg-emerald-50 border border-emerald-100 p-10 rounded-[48px] relative overflow-hidden group active:scale-[0.99] transition-colors">
             <div className="relative z-10 flex flex-col gap-6">
               <div className="flex items-center gap-4">
                 <div className="size-16 rounded-3xl bg-white flex items-center justify-center text-emerald-600 shadow-sm">
                   <FileText size={32} />
                 </div>
-                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-400">New archive</span>
+                <span className="text-[10px] font-extrabold tracking-wide text-emerald-400">New archive</span>
               </div>
               <div>
-                <h4 className="text-2xl font-black text-slate-900 leading-tight">Songhai empire records</h4>
+                <h4 className="text-2xl font-extrabold text-slate-900 leading-tight">Songhai empire records</h4>
                 <p className="text-slate-500 text-sm font-medium mt-2 leading-relaxed">Explore fully verified digitized heritage.</p>
               </div>
             </div>
@@ -146,8 +145,8 @@ export default function DiscoverScreen({ onNavigate }: DiscoverScreenProps) {
       {/* Interactive Map Section */}
       <section className="px-6 py-10">
         <div className="flex items-center justify-between mb-8 px-2">
-          <h2 className="text-2xl font-black text-slate-900 tracking-tight">Africa pulse</h2>
-          <span className="text-[10px] font-black text-primary px-4 py-2 bg-primary/5 rounded-xl uppercase tracking-widest">Live connect</span>
+          <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">Africa pulse</h2>
+          <span className="text-[10px] font-extrabold text-primary px-4 py-2 bg-primary/5 rounded-xl tracking-wide">Live connect</span>
         </div>
         <div className="relative w-full aspect-[4/5] bg-white rounded-[56px] overflow-hidden border border-slate-100 shadow-2xl p-2">
            <InteractiveMap />
@@ -157,18 +156,18 @@ export default function DiscoverScreen({ onNavigate }: DiscoverScreenProps) {
       {/* Popular Tribes */}
       <section className="px-6 py-10 space-y-10">
         <div className="flex items-center justify-between px-2">
-          <h2 className="text-2xl font-black text-slate-900 tracking-tight">Popular tribes</h2>
-          <button className="text-primary font-black text-[10px] uppercase tracking-widest bg-primary/5 px-4 py-2 rounded-xl">Explore all</button>
+          <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">Popular tribes</h2>
+          <button className="text-primary font-extrabold text-[10px] tracking-wide bg-primary/5 px-4 py-2 rounded-xl">Explore all</button>
         </div>
         <div className="grid grid-cols-2 gap-6">
           {tribeCards.map((tribe, i) => (
             <div key={i} className="flex flex-col gap-4 group cursor-pointer">
-              <div className="w-full aspect-square rounded-[40px] overflow-hidden bg-white transition-all group-hover:scale-105 border border-slate-50 shadow-sm p-2">
+              <div className="w-full aspect-square rounded-[40px] overflow-hidden bg-white transition-colors group-hover:scale-105 border border-slate-50 shadow-sm p-2">
                 <img className="w-full h-full object-cover rounded-[32px] shadow-inner" src={tribe.img} alt={tribe.title} />
               </div>
               <div className="text-center">
-                <p className="font-black text-slate-900 text-base lowercase first-letter:uppercase">{tribe.title}</p>
-                <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">{tribe.sub}</p>
+                <p className="font-extrabold text-slate-900 text-base lowercase first-letter:uppercase">{tribe.title}</p>
+                <p className="text-[10px] text-slate-400 font-bold tracking-wide mt-1">{tribe.sub}</p>
               </div>
             </div>
           ))}

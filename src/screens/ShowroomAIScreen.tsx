@@ -38,8 +38,8 @@ export default function ShowroomAIScreen({ onNavigate }: ShowroomAIScreenProps) 
             <ArrowLeft className="text-slate-900" size={24} />
           </button>
           <div>
-            <h2 className="text-lg font-black leading-tight tracking-tight uppercase">Amina's Boutique</h2>
-            <p className="text-[10px] font-black text-[#ff8c00] uppercase tracking-widest">Showroom AI</p>
+            <h2 className="text-lg font-extrabold leading-tight tracking-tight">Amina's Boutique</h2>
+            <p className="text-[10px] font-extrabold text-[#ff8c00] tracking-wide">Showroom AI</p>
           </div>
         </div>
         <div className="flex gap-2 text-slate-600">
@@ -64,14 +64,14 @@ export default function ShowroomAIScreen({ onNavigate }: ShowroomAIScreenProps) 
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
             
             <div className="absolute top-6 right-6">
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/20 backdrop-blur-md px-4 py-1.5 text-[10px] font-black text-white border border-white/30 uppercase tracking-widest">
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/20 backdrop-blur-md px-4 py-1.5 text-[10px] font-extrabold text-white border border-white/30 tracking-wide">
                 <Rotate3d size={14} /> 3D PREVIEW
               </span>
             </div>
 
             <div className="absolute bottom-8 left-8 right-8 text-white">
-              <p className="text-[10px] font-black opacity-90 uppercase tracking-widest mb-1">Collection 2024</p>
-              <h1 className="text-3xl font-black leading-tight uppercase tracking-tight">Modern Ankara Fusion Dress</h1>
+              <p className="text-[10px] font-extrabold opacity-90 tracking-wide mb-1">Collection 2024</p>
+              <h1 className="text-3xl font-extrabold leading-tight tracking-tight">Modern Ankara Fusion Dress</h1>
             </div>
           </div>
         </div>
@@ -79,10 +79,10 @@ export default function ShowroomAIScreen({ onNavigate }: ShowroomAIScreenProps) 
         {/* Action Bar */}
         <div className="px-6 py-4 flex items-center justify-between border-y border-slate-100 my-2">
           <div>
-            <p className="text-[10px] text-slate-400 font-black uppercase tracking-widest">Current Price</p>
-            <p className="text-3xl font-black text-[#ff8c00]">45.00 AFR</p>
+            <p className="text-[10px] text-slate-400 font-extrabold tracking-wide">Current Price</p>
+            <p className="text-3xl font-extrabold text-[#ff8c00]">45.00 AFR</p>
           </div>
-          <button className="flex items-center gap-2 bg-[#ff8c00] hover:brightness-110 text-white px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-all shadow-xl shadow-orange-500/20 active:scale-95">
+          <button className="flex items-center gap-2 bg-[#ff8c00] hover:brightness-110 text-white px-8 py-4 rounded-2xl font-extrabold text-xs tracking-wide transition-colors shadow-xl shadow-orange-500/20 active:scale-95">
             <Wallet size={18} />
             Buy via AfriPay
           </button>
@@ -101,7 +101,7 @@ export default function ShowroomAIScreen({ onNavigate }: ShowroomAIScreenProps) 
               <Play size={32} fill="currentColor" />
             </button>
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
-              <p className="text-white text-[10px] font-black flex items-center gap-2 uppercase tracking-widest">
+              <p className="text-white text-[10px] font-extrabold flex items-center gap-2 tracking-wide">
                 <Bot size={14} className="text-[#ff8c00]" />
                 AI Presenter: Watch Demo
               </p>
@@ -112,22 +112,22 @@ export default function ShowroomAIScreen({ onNavigate }: ShowroomAIScreenProps) 
             <button className="flex flex-col items-center justify-center gap-3 rounded-[2rem] border-2 border-slate-100 p-6 hover:bg-slate-50 transition-colors active:scale-95 shadow-sm">
               <div className="size-14 bg-orange-50 rounded-2xl flex items-center justify-center text-[#ff8c00]">
                 {/* STRAIGHTEN was used in original, using custom lucide variation or simple div for sizing icon */}
-                <div className="border-2 border-[#ff8c00] w-8 h-4 rounded-sm flex items-center justify-center font-black text-[8px]">CM</div>
+                <div className="border-2 border-[#ff8c00] w-8 h-4 rounded-sm flex items-center justify-center font-extrabold text-[8px]">CM</div>
               </div>
-              <span className="text-xs font-black uppercase tracking-tight">Virtual Fitting</span>
+              <span className="text-xs font-extrabold tracking-tight">Virtual Fitting</span>
             </button>
             <button className="flex flex-col items-center justify-center gap-3 rounded-[2rem] border-2 border-slate-100 p-6 hover:bg-slate-50 transition-colors active:scale-95 shadow-sm">
               <div className="size-14 bg-green-50 rounded-2xl flex items-center justify-center text-green-600">
                 <MessageCircle size={28} />
               </div>
-              <span className="text-xs font-black uppercase tracking-tight">WhatsApp Shop</span>
+              <span className="text-xs font-extrabold tracking-tight">WhatsApp Shop</span>
             </button>
           </div>
         </div>
 
         {/* Recommendations */}
         <div className="p-6">
-          <h3 className="text-xl font-black uppercase tracking-tight mb-4 flex items-center gap-2">
+          <h3 className="text-xl font-extrabold tracking-tight mb-4 flex items-center gap-2">
             <Sparkles size={20} className="text-[#ff8c00]" />
             Stylist Recommendations
           </h3>
@@ -138,10 +138,10 @@ export default function ShowroomAIScreen({ onNavigate }: ShowroomAIScreenProps) 
                 style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBq8SNtCPoBde1Ej6941iZcTJ6jSDS6-aPIaQ6IeQKgQzrsExd3rbVPtpqbchGir1onK8AyRzkDknFf9xreKqThgMbxgMPDnrQc2Ne6MLZpwYW_NKBHmQnPuMIQeL76j2p6hMOf2gMk4slDh670dz_qlfZcD6cNEbB-gUXwQs3AD-_if0qHUIQE6RzK40YqdX3X72MS7tbsADA_cCRVnJDIUGZi7ZFRyNhebiORwVAdFc9I8MP-dBYyPxQz4TA6J4FpgdvfrmMe1eU")' }}
               ></div>
               <div className="flex-1">
-                <p className="text-sm font-black uppercase tracking-tight">Gold Accent Clutch</p>
-                <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Perfect match for this pattern</p>
+                <p className="text-sm font-extrabold tracking-tight">Gold Accent Clutch</p>
+                <p className="text-[10px] text-slate-500 font-bold tracking-wide">Perfect match for this pattern</p>
               </div>
-              <p className="text-sm font-black text-[#ff8c00]">12 AFR</p>
+              <p className="text-sm font-extrabold text-[#ff8c00]">12 AFR</p>
             </div>
           </div>
         </div>
@@ -149,9 +149,9 @@ export default function ShowroomAIScreen({ onNavigate }: ShowroomAIScreenProps) 
 
       {/* AI Assistant FAB */}
       <div className="fixed bottom-32 right-6 z-50">
-        <button className="group relative flex size-16 items-center justify-center rounded-full bg-[#ff8c00] text-white shadow-2xl hover:scale-110 active:scale-95 transition-all">
+        <button className="group relative flex size-16 items-center justify-center rounded-full bg-[#ff8c00] text-white shadow-2xl hover:scale-110 active:scale-95 transition-colors">
           <Bot size={32} />
-          <span className="absolute right-full mr-4 whitespace-nowrap rounded-2xl bg-slate-900 text-white px-4 py-2 text-[10px] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+          <span className="absolute right-full mr-4 whitespace-nowrap rounded-2xl bg-slate-900 text-white px-4 py-2 text-[10px] font-extrabold tracking-wide opacity-0 group-hover:opacity-100 transition-opacity">
             Chat with AI Stylist
           </span>
           <span className="absolute -top-1 -right-1 flex h-5 w-5">
@@ -165,19 +165,19 @@ export default function ShowroomAIScreen({ onNavigate }: ShowroomAIScreenProps) 
       <nav className="fixed bottom-0 left-0 right-0 max-w-md mx-auto z-40 flex gap-2 border-t border-slate-100 bg-white/95 backdrop-blur-md px-4 pb-8 pt-3">
         <button className="flex flex-1 flex-col items-center justify-center gap-1 text-[#ff8c00]">
           <Store size={24} />
-          <p className="text-[10px] font-black uppercase tracking-widest">Showroom</p>
+          <p className="text-[10px] font-extrabold tracking-wide">Showroom</p>
         </button>
         <button className="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400">
           <Shirt size={24} />
-          <p className="text-[10px] font-black uppercase tracking-widest">Wardrobe</p>
+          <p className="text-[10px] font-extrabold tracking-wide">Wardrobe</p>
         </button>
         <button className="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400">
           <Wand2 size={24} />
-          <p className="text-[10px] font-black uppercase tracking-widest">Stylist</p>
+          <p className="text-[10px] font-extrabold tracking-wide">Stylist</p>
         </button>
         <button className="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400">
           <UserIcon size={24} />
-          <p className="text-[10px] font-black uppercase tracking-widest">Profile</p>
+          <p className="text-[10px] font-extrabold tracking-wide">Profile</p>
         </button>
       </nav>
     </div>

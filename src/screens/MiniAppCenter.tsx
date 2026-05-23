@@ -33,13 +33,13 @@ export default function MiniAppCenter({ onNavigate }: MiniAppCenterProps) {
         <div className="flex items-center gap-4 mb-4">
           <button 
             onClick={() => onNavigate('more')}
-            className="p-3 bg-slate-50 rounded-2xl text-slate-400 active:scale-90 transition-all shadow-sm"
+            className="p-3 bg-slate-50 rounded-2xl text-slate-400 active:scale-90 transition-colors shadow-sm"
           >
             <ArrowLeft size={24} />
           </button>
-          <h1 className="text-3xl font-black tracking-tighter text-slate-900 uppercase">App centre</h1>
+          <h1 className="text-3xl font-extrabold tracking-tight text-slate-900">App centre</h1>
         </div>
-        <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] ml-1">Ecosystem & integrations</p>
+        <p className="text-[10px] font-extrabold text-slate-400 tracking-wide ml-1">Ecosystem & integrations</p>
       </div>
 
       <main className="flex-1 px-6 pb-32 flex flex-col items-center justify-center text-center">
@@ -59,7 +59,7 @@ export default function MiniAppCenter({ onNavigate }: MiniAppCenterProps) {
           <motion.div 
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="absolute -top-4 -right-4 bg-slate-900 text-white px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-widest shadow-2xl border-4 border-white"
+            className="absolute -top-4 -right-4 bg-slate-900 text-white px-6 py-3 rounded-full text-[10px] font-extrabold tracking-wide shadow-2xl border-4 border-white"
           >
             Q3 2026
           </motion.div>
@@ -67,8 +67,8 @@ export default function MiniAppCenter({ onNavigate }: MiniAppCenterProps) {
 
         <div className="space-y-6 max-w-sm mx-auto">
           <div className="space-y-2">
-            <h2 className="text-4xl font-black text-slate-900 tracking-tighter leading-none">Coming soon</h2>
-            <p className="text-slate-400 text-[11px] font-black uppercase tracking-[0.3em]">Connecting the continent</p>
+            <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight leading-none">Coming soon</h2>
+            <p className="text-slate-400 text-[11px] font-extrabold tracking-wide">Connecting the continent</p>
           </div>
           
           <p className="text-slate-500 text-base font-medium leading-relaxed">
@@ -82,8 +82,8 @@ export default function MiniAppCenter({ onNavigate }: MiniAppCenterProps) {
                  <Gamepad2 size={28} />
                </div>
                <div>
-                  <h4 className="font-black text-slate-900 text-sm tracking-tight">Mini games</h4>
-                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Tribe quests & rewards</p>
+                  <h4 className="font-extrabold text-slate-900 text-sm tracking-tight">Mini games</h4>
+                  <p className="text-[10px] text-slate-400 font-bold tracking-wide">Tribe quests & rewards</p>
                </div>
             </div>
             <div className="bg-slate-50 p-6 rounded-[32px] border border-slate-100 flex items-center gap-5 text-left opacity-60 grayscale">
@@ -91,15 +91,15 @@ export default function MiniAppCenter({ onNavigate }: MiniAppCenterProps) {
                  <Sparkles size={28} />
                </div>
                <div>
-                  <h4 className="font-black text-slate-900 text-sm tracking-tight">Ai utilities</h4>
-                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Heritage recognition</p>
+                  <h4 className="font-extrabold text-slate-900 text-sm tracking-tight">Ai utilities</h4>
+                  <p className="text-[10px] text-slate-400 font-bold tracking-wide">Heritage recognition</p>
                </div>
             </div>
           </div>
 
           <button 
             onClick={() => onNavigate('more')}
-            className="w-full mt-12 bg-slate-900 text-white py-6 rounded-[32px] font-black text-[11px] uppercase tracking-widest shadow-2xl shadow-slate-900/20 active:scale-95 transition-all"
+            className="w-full mt-12 bg-slate-900 text-white py-6 rounded-[32px] font-extrabold text-[11px] tracking-wide shadow-2xl shadow-slate-900/20 active:scale-95 transition-colors"
           >
             Return to dashboard
           </button>

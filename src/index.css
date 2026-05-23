@@ -19,11 +19,25 @@
 @layer base {
   body {
     @apply bg-background-light text-slate-900 font-sans antialiased;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
   
   /* Enforce Sentence Case and common text rules */
   h1, h2, h3, h4, span, p, button {
     @apply normal-case tracking-normal;
+  }
+
+  button, input, textarea, select {
+    font: inherit;
+  }
+
+  button {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40;
+  }
+
+  img {
+    @apply block;
   }
 }
 
@@ -34,5 +48,18 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

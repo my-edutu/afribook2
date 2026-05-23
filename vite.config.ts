@@ -15,6 +15,48 @@ export default defineConfig(({mode}) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    build: {
+      chunkSizeWarningLimit: 800,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (!id.includes('node_modules')) {
+              return;
+            }
+
+            if (id.includes('/@react-three/fiber/')) {
+              return 'react-three-fiber';
+            }
+
+            if (id.includes('/@react-three/drei/')) {
+              return 'react-three-drei';
+            }
+
+            if (id.includes('/three-stdlib/')) {
+              return 'three-stdlib';
+            }
+
+            if (id.includes('/three/')) {
+              return 'three-core';
+            }
+
+            if (id.includes('/d3') || id.includes('/topojson-client/')) {
+              return 'data-viz';
+            }
+
+            if (id.includes('/react/') || id.includes('/react-dom/')) {
+              return 'react';
+            }
+
+            if (id.includes('/@google/genai/')) {
+              return 'google-ai';
+            }
+
+            return;
+          },
+        },
+      },
+    },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.

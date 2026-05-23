@@ -40,12 +40,12 @@ export default function AfriHeroScreen({ onNavigate }: AfriHeroScreenProps) {
               <Library size={28} />
             </div>
             <div className="flex flex-col">
-              <span className="text-[10px] font-black uppercase tracking-[0.3em] text-amber-400">Archive center</span>
-              <h1 className="text-3xl font-black tracking-tighter text-slate-900 leading-none">Afrihero archive</h1>
+              <span className="text-[10px] font-extrabold tracking-wide text-amber-400">Archive center</span>
+              <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 leading-none">Afrihero archive</h1>
             </div>
           </div>
           <p className="text-slate-500 text-sm font-medium leading-relaxed max-w-sm">
-            Africa’s digital legacy. Explore hero profiles and the documentary timeline of our shared history.
+            Africa's digital legacy. Explore hero profiles and the documentary timeline of our shared history.
           </p>
         </div>
         
@@ -62,11 +62,11 @@ export default function AfriHeroScreen({ onNavigate }: AfriHeroScreenProps) {
             </div>
             <input 
               type="text" 
-              placeholder="Search heroes or historical events..." 
-              className="w-full h-16 pl-14 pr-6 bg-white border border-slate-100 rounded-[24px] shadow-sm font-bold text-slate-900 focus:ring-4 focus:ring-amber-500/5 outline-none placeholder:text-slate-300"
+              placeholder="Search heroes or historical events…" 
+              className="w-full h-16 pl-14 pr-6 bg-white border border-slate-100 rounded-[24px] shadow-sm font-bold text-slate-900 focus:ring-4 focus:ring-amber-500/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 placeholder:text-slate-300"
             />
           </div>
-          <div className="flex items-center gap-2 text-slate-400 text-[10px] font-black uppercase tracking-widest px-4">
+          <div className="flex items-center gap-2 text-slate-400 text-[10px] font-extrabold tracking-wide px-4">
             <Sparkles size={16} className="text-amber-500" />
             AI Moderation active: Ensuring accuracy & citations
           </div>
@@ -76,24 +76,24 @@ export default function AfriHeroScreen({ onNavigate }: AfriHeroScreenProps) {
         <section className="mb-12">
           <div className="flex justify-between items-end mb-8 px-2">
             <div>
-              <h2 className="text-2xl font-black tracking-tight leading-none text-slate-900">Hero profiles</h2>
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2">Documenting legends</p>
+              <h2 className="text-2xl font-extrabold tracking-tight leading-none text-slate-900">Hero profiles</h2>
+              <p className="text-[10px] font-bold text-slate-400 tracking-wide mt-2">Documenting legends</p>
             </div>
-            <button className="text-amber-600 text-[10px] font-black uppercase tracking-widest bg-amber-50 px-4 py-2 rounded-xl border border-amber-100 shadow-sm active:scale-95 transition-all">Contribute</button>
+            <button className="text-amber-600 text-[10px] font-extrabold tracking-wide bg-amber-50 px-4 py-2 rounded-xl border border-amber-100 shadow-sm active:scale-95 transition-colors">Contribute</button>
           </div>
           
           <div className="flex gap-6 overflow-x-auto no-scrollbar pb-6 px-2">
             {heroes.map((hero, i) => (
-              <div key={i} className="min-w-[280px] bg-white rounded-[40px] border border-slate-50 p-2 shadow-sm overflow-hidden group cursor-pointer active:scale-[0.98] transition-all hover:shadow-xl">
+              <div key={i} className="min-w-[280px] bg-white rounded-[40px] border border-slate-50 p-2 shadow-sm overflow-hidden group cursor-pointer active:scale-[0.98] transition-colors hover:shadow-xl">
                 <div className="h-48 rounded-[34px] overflow-hidden mb-5 shadow-inner">
                   <img src={hero.img} alt={hero.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="px-5 pb-5">
                   <div className="flex items-center gap-2 mb-2.5">
                     <Award size={16} className="text-amber-500" />
-                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">{hero.category}</span>
+                    <span className="text-[10px] font-extrabold tracking-wide text-slate-400">{hero.category}</span>
                   </div>
-                  <h4 className="text-xl font-black text-slate-900 tracking-tight mb-3 lowercase first-letter:uppercase">{hero.name}</h4>
+                  <h4 className="text-xl font-extrabold text-slate-900 tracking-tight mb-3 lowercase first-letter:uppercase">{hero.name}</h4>
                   <p className="text-xs font-medium text-slate-500 leading-relaxed line-clamp-2">{hero.bio}</p>
                 </div>
               </div>
@@ -105,10 +105,10 @@ export default function AfriHeroScreen({ onNavigate }: AfriHeroScreenProps) {
         <section className="mb-12">
           <div className="flex justify-between items-end mb-8 px-2">
             <div>
-              <h2 className="text-2xl font-black tracking-tight leading-none text-slate-900">Archive</h2>
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2">Historical milestones</p>
+              <h2 className="text-2xl font-extrabold tracking-tight leading-none text-slate-900">Archive</h2>
+              <p className="text-[10px] font-bold text-slate-400 tracking-wide mt-2">Historical milestones</p>
             </div>
-            <button className="text-indigo-600 text-[10px] font-black uppercase tracking-widest">Filter era</button>
+            <button className="text-indigo-600 text-[10px] font-extrabold tracking-wide">Filter era</button>
           </div>
           
           <div className="space-y-5">
@@ -117,16 +117,16 @@ export default function AfriHeroScreen({ onNavigate }: AfriHeroScreenProps) {
               { year: '2020', event: 'Continental trade agreement', sub: 'AFCFTA implementation kick-off', color: 'border-emerald-500 bg-white' },
               { year: '1963', event: 'African unity foundation', sub: 'OAU establishment in addis ababa', color: 'border-amber-500 bg-white' },
             ].map((entry, i) => (
-              <div key={i} className={`p-6 rounded-[32px] border-l-8 border border-slate-50 ${entry.color} flex justify-between items-center group cursor-pointer shadow-sm hover:shadow-md transition-all active:scale-[0.99]`}>
+              <div key={i} className={`p-6 rounded-[32px] border-l-8 border border-slate-50 ${entry.color} flex justify-between items-center group cursor-pointer shadow-sm hover:shadow-md transition-colors active:scale-[0.99]`}>
                 <div className="space-y-1">
                   <div className="flex items-center gap-2 mb-1">
-                    <Calendar size={14} className="text-slate-300 font-black" />
-                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{entry.year}</span>
+                    <Calendar size={14} className="text-slate-300 font-extrabold" />
+                    <span className="text-[10px] font-extrabold text-slate-400 tracking-wide">{entry.year}</span>
                   </div>
-                  <h4 className="text-lg font-black text-slate-900 tracking-tight lowercase first-letter:uppercase">{entry.event}</h4>
-                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{entry.sub}</p>
+                  <h4 className="text-lg font-extrabold text-slate-900 tracking-tight lowercase first-letter:uppercase">{entry.event}</h4>
+                  <p className="text-[10px] font-bold text-slate-400 tracking-wide">{entry.sub}</p>
                 </div>
-                <div className="size-12 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 group-hover:text-primary group-hover:bg-primary/5 transition-all">
+                <div className="size-12 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 group-hover:text-primary group-hover:bg-primary/5 transition-colors">
                   <ChevronRight size={22} />
                 </div>
               </div>
@@ -139,11 +139,11 @@ export default function AfriHeroScreen({ onNavigate }: AfriHeroScreenProps) {
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-6 text-amber-100">
               <ShieldCheck size={28} />
-              <h3 className="font-black uppercase tracking-[0.2em] text-[10px]">Reputation reward</h3>
+              <h3 className="font-extrabold tracking-wide text-[10px]">Reputation reward</h3>
             </div>
-            <h4 className="text-3xl font-black mb-3">Verified author</h4>
+            <h4 className="text-3xl font-extrabold mb-3">Verified author</h4>
             <p className="text-amber-50 text-sm font-medium opacity-90 mb-8 max-w-[80%] leading-relaxed">Earn reputation by contributing verified data to hero profiles and archives.</p>
-            <button className="bg-white text-amber-600 px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest shadow-xl active:scale-95 transition-all">Start contributing</button>
+            <button className="bg-white text-amber-600 px-8 py-4 rounded-2xl font-extrabold text-xs tracking-wide shadow-xl active:scale-95 transition-colors">Start contributing</button>
           </div>
           <div className="absolute -right-12 -bottom-12 opacity-10 transform scale-[1.5] text-white">
             <BookOpen size={180} />

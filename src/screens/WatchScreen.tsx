@@ -70,7 +70,7 @@ const MOCK_STREAMS: Stream[] = [
       img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCa7kMSnak5Z7TvZWOEKQAbm6CbO3ODtMNbcDpHbSCmI-nVtbjbopcryUHPV4zJOWRW12Wc01rnkTMgOB25pW4pHliiEPM5pHy1Zy5deuxJaSZn2VsSfau3kmv3bxnuf2_PYfOhZheJVH22vwTRX9EHqC7emYnxTvXDQhs_eHxoZf7XEUmy9GCIHLiRpc2QWxuDuVTuG74Lonkv6HsdM00RKE-Rmn3S1RMLYmWccp0ZLuCEkgxUdgnwkzkB7AdX88R_MxTqZHpt9qg',
       isVerified: false
     },
-    title: 'Secret Jollof Recipes 🌶️',
+    title: 'Secret Jollof Recipes',
     description: 'Today we cook the authentic Ghana Jollof. No shortcuts! Subscribe for the ingredient list.',
     location: 'Accra, Ghana',
     viewers: '8.1k',
@@ -128,14 +128,14 @@ export default function WatchScreen({ onNavigate }: WatchScreenProps) {
         <div className="flex justify-center gap-8 pointer-events-auto">
           <button 
             onClick={() => setActiveTab('following')}
-            className={`text-sm font-black transition-all drop-shadow-2xl uppercase tracking-widest ${activeTab === 'following' ? 'text-white scale-110' : 'text-white/40'}`}
+            className={`text-sm font-extrabold transition-colors drop-shadow-2xl tracking-wide ${activeTab === 'following' ? 'text-white scale-110' : 'text-white/40'}`}
           >
             Following
           </button>
           <div className="w-[1px] h-4 bg-white/10 self-center" />
           <button 
             onClick={() => setActiveTab('foryou')}
-            className={`text-sm font-black transition-all drop-shadow-2xl uppercase tracking-widest ${activeTab === 'foryou' ? 'text-white scale-110' : 'text-white/40'}`}
+            className={`text-sm font-extrabold transition-colors drop-shadow-2xl tracking-wide ${activeTab === 'foryou' ? 'text-white scale-110' : 'text-white/40'}`}
           >
             For you
           </button>
@@ -182,37 +182,37 @@ export default function WatchScreen({ onNavigate }: WatchScreenProps) {
               <div className="size-14 rounded-full border-2 border-white overflow-hidden shadow-2xl transition-transform group-active:scale-95">
                 <img src={stream.user.img} alt={stream.user.name} className="w-full h-full object-cover" />
               </div>
-              <button className="absolute -bottom-2 left-1/2 -translate-x-1/2 size-6 bg-primary rounded-full flex items-center justify-center text-white ring-2 ring-black hover:scale-110 transition-all">
+              <button className="absolute -bottom-2 left-1/2 -translate-x-1/2 size-6 bg-primary rounded-full flex items-center justify-center text-white ring-2 ring-black hover:scale-110 transition-colors">
                 <Plus size={16} />
               </button>
             </div>
 
             <button className="flex flex-col items-center gap-1 group" onClick={(e) => { e.stopPropagation(); addReaction(); }}>
-              <div className="size-14 rounded-full bg-white/10 backdrop-blur-3xl flex items-center justify-center text-white border border-white/10 group-active:scale-125 transition-all shadow-xl">
+              <div className="size-14 rounded-full bg-white/10 backdrop-blur-3xl flex items-center justify-center text-white border border-white/10 group-active:scale-125 transition-colors shadow-xl">
                 <Heart size={28} className="fill-white" />
               </div>
-              <span className="text-[10px] text-white font-black drop-shadow-md uppercase tracking-tighter mt-1">{stream.likes}</span>
+              <span className="text-[10px] text-white font-extrabold drop-shadow-md tracking-tight mt-1">{stream.likes}</span>
             </button>
 
             <button className="flex flex-col items-center gap-1 group" onClick={(e) => e.stopPropagation()}>
-              <div className="size-14 rounded-full bg-white/10 backdrop-blur-3xl flex items-center justify-center text-white border border-white/10 group-active:scale-125 transition-all shadow-xl">
+              <div className="size-14 rounded-full bg-white/10 backdrop-blur-3xl flex items-center justify-center text-white border border-white/10 group-active:scale-125 transition-colors shadow-xl">
                 <MessageCircle size={28} fill="white" />
               </div>
-              <span className="text-[10px] text-white font-black drop-shadow-md uppercase tracking-tighter mt-1">1.2k</span>
+              <span className="text-[10px] text-white font-extrabold drop-shadow-md tracking-tight mt-1">1.2k</span>
             </button>
 
             <button className="flex flex-col items-center gap-1 group" onClick={(e) => e.stopPropagation()}>
-              <div className="size-14 rounded-full bg-amber-500 backdrop-blur-3xl flex items-center justify-center text-white shadow-[0_0_30px_rgba(245,158,11,0.4)] group-active:scale-90 transition-all">
+              <div className="size-14 rounded-full bg-amber-500 backdrop-blur-3xl flex items-center justify-center text-white shadow-[0_0_30px_rgba(245,158,11,0.4)] group-active:scale-90 transition-colors">
                 <Coins size={28} />
               </div>
-              <span className="text-[10px] text-white font-black drop-shadow-md uppercase tracking-tighter mt-1">Gift</span>
+              <span className="text-[10px] text-white font-extrabold drop-shadow-md tracking-tight mt-1">Gift</span>
             </button>
 
             <button className="flex flex-col items-center gap-1 group" onClick={(e) => e.stopPropagation()}>
-              <div className="size-14 rounded-full bg-white/10 backdrop-blur-3xl flex items-center justify-center text-white border border-white/10 group-active:scale-125 transition-all shadow-xl">
+              <div className="size-14 rounded-full bg-white/10 backdrop-blur-3xl flex items-center justify-center text-white border border-white/10 group-active:scale-125 transition-colors shadow-xl">
                 <Share2 size={26} fill="white" />
               </div>
-              <span className="text-[10px] text-white font-black drop-shadow-md uppercase tracking-tighter mt-1">Share</span>
+              <span className="text-[10px] text-white font-extrabold drop-shadow-md tracking-tight mt-1">Share</span>
             </button>
 
             <motion.div 
@@ -238,7 +238,7 @@ export default function WatchScreen({ onNavigate }: WatchScreenProps) {
                      <Sparkles size={18} className="text-primary" />
                    </div>
                    <p className="text-xs text-white/90 font-medium leading-relaxed">
-                     <span className="text-primary font-black uppercase text-[10px] tracking-widest block mb-1">AI Subtitles</span>
+                     <span className="text-primary font-extrabold text-[10px] tracking-wide block mb-1">AI Subtitles</span>
                      {stream.subtitles}
                    </p>
                 </div>
@@ -246,7 +246,7 @@ export default function WatchScreen({ onNavigate }: WatchScreenProps) {
                    {stream.aiHighlights.map((h, i) => (
                      <div key={i} className="flex items-center gap-2 bg-indigo-600/40 backdrop-blur-xl px-4 py-1.5 rounded-full border border-white/10 shadow-sm border-l-4 border-l-primary">
                         <TrendingUp size={12} className="text-primary" />
-                        <span className="text-[10px] text-white font-black uppercase tracking-tight">{h}</span>
+                        <span className="text-[10px] text-white font-extrabold tracking-tight">{h}</span>
                      </div>
                    ))}
                 </div>
@@ -255,17 +255,17 @@ export default function WatchScreen({ onNavigate }: WatchScreenProps) {
 
             <div className="max-w-[85%] space-y-3">
               <div className="flex items-center gap-3">
-                <h3 className="text-white font-black text-xl drop-shadow-2xl tracking-tight">{stream.user.name}</h3>
+                <h3 className="text-white font-extrabold text-xl drop-shadow-2xl tracking-tight">{stream.user.name}</h3>
                 {stream.user.isVerified && <ShieldCheck size={18} className="text-primary" />}
-                <button className="bg-primary text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest active:scale-95 transition-all">Join tribe</button>
+                <button className="bg-primary text-white text-[10px] font-extrabold px-4 py-1.5 rounded-full tracking-wide active:scale-95 transition-colors">Join tribe</button>
               </div>
               <p className="text-white/80 text-sm leading-relaxed line-clamp-2 font-medium">
                 {stream.description}
               </p>
               <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2 text-white/50 text-[10px] font-black bg-white/5 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/5">
+                <div className="flex items-center gap-2 text-white/50 text-[10px] font-extrabold bg-white/5 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/5">
                   <Music2 size={14} />
-                  <span className="truncate max-w-[120px] uppercase tracking-tighter">Original live audio - {stream.user.handle}</span>
+                  <span className="truncate max-w-[120px] tracking-tight">Original live audio - {stream.user.handle}</span>
                 </div>
               </div>
             </div>
@@ -276,18 +276,18 @@ export default function WatchScreen({ onNavigate }: WatchScreenProps) {
                   <div className="size-6 rounded-full bg-amber-400 overflow-hidden border border-white/20">
                     <img src={stream.user.img} className="w-full h-full object-cover" />
                   </div>
-                  <span className="text-[11px] font-black text-amber-300">Amina:</span>
-                  <span className="text-[11px] text-white/90 font-medium">This tech is fire! 🚀</span>
+                  <span className="text-[11px] font-extrabold text-amber-300">Amina:</span>
+                  <span className="text-[11px] text-white/90 font-medium">This tech is fire.</span>
                </div>
                <div className="flex items-center gap-3 animate-in fade-in slide-in-from-left-4 duration-700">
                   <div className="size-6 rounded-full bg-blue-400 border border-white/20" />
-                  <span className="text-[11px] font-black text-blue-300">Kofi:</span>
-                  <span className="text-[11px] text-white/90 font-medium">Join the tribe everyone! 👇</span>
+                  <span className="text-[11px] font-extrabold text-blue-300">Kofi:</span>
+                  <span className="text-[11px] text-white/90 font-medium">Join the tribe everyone.</span>
                </div>
                <div className="pt-2">
                  <input 
-                   placeholder="Add a comment..."
-                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-[11px] text-white placeholder:text-white/30 focus:outline-none focus:bg-white/10 transition-all font-medium"
+                   placeholder="Add a comment…"
+                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-[11px] text-white placeholder:text-white/30 focus-visible:outline-none focus:bg-white/10 transition-colors font-medium"
                    onClick={(e) => e.stopPropagation()}
                  />
                </div>
@@ -296,15 +296,15 @@ export default function WatchScreen({ onNavigate }: WatchScreenProps) {
 
           {/* Top Live Indicators */}
           <div className="absolute top-24 left-6 flex gap-3 z-30 pointer-events-none">
-             <div className="flex items-center gap-2 bg-red-600 px-4 py-1.5 rounded-full text-[10px] font-black text-white shadow-[0_0_20px_rgba(220,38,38,0.5)] animate-pulse">
+             <div className="flex items-center gap-2 bg-red-600 px-4 py-1.5 rounded-full text-[10px] font-extrabold text-white shadow-[0_0_20px_rgba(220,38,38,0.5)] animate-pulse">
                 <span className="size-2 bg-white rounded-full" />
                 LIVE
              </div>
-             <div className="bg-white/10 backdrop-blur-2xl px-4 py-1.5 rounded-full text-[10px] font-black text-white flex items-center gap-2 border border-white/20">
+             <div className="bg-white/10 backdrop-blur-2xl px-4 py-1.5 rounded-full text-[10px] font-extrabold text-white flex items-center gap-2 border border-white/20">
                 <Eye size={14} className="text-primary" />
                 {stream.viewers}
              </div>
-             <div className="bg-white/10 backdrop-blur-2xl px-4 py-1.5 rounded-full text-[10px] font-black text-white flex items-center gap-2 border border-white/20">
+             <div className="bg-white/10 backdrop-blur-2xl px-4 py-1.5 rounded-full text-[10px] font-extrabold text-white flex items-center gap-2 border border-white/20">
                 <MapPin size={14} className="text-primary" />
                 {stream.location}
              </div>
@@ -312,13 +312,6 @@ export default function WatchScreen({ onNavigate }: WatchScreenProps) {
         </section>
       ))}
 
-      {/* Side Action (AI Insights Toggle) */}
-      <button 
-        onClick={(e) => { e.stopPropagation(); setShowAI(!showAI); }}
-        className="fixed bottom-36 left-4 z-50 size-14 rounded-full bg-black/20 backdrop-blur-3xl flex items-center justify-center text-white border border-white/10 shadow-2xl active:scale-95 transition-all"
-      >
-        <Sparkles size={24} className={showAI ? 'text-primary' : 'text-white/40'} />
-      </button>
     </div>
   );
 }

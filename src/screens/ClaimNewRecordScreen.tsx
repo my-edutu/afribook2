@@ -41,7 +41,7 @@ export default function ClaimNewRecordScreen({ onNavigate }: ClaimNewRecordScree
           >
             <ArrowLeft size={24} />
           </button>
-          <h1 className="text-2xl font-black bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent tracking-tight">AfriBook</h1>
+          <h1 className="text-2xl font-extrabold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent tracking-tight">AfriBook</h1>
         </div>
         <div className="flex items-center gap-2">
           <button className="p-2 rounded-full hover:bg-primary/10 text-slate-500">
@@ -59,7 +59,7 @@ export default function ClaimNewRecordScreen({ onNavigate }: ClaimNewRecordScree
 
       <main className="px-6 py-10 space-y-10">
         <header className="space-y-3">
-          <h1 className="text-4xl font-black tracking-tight text-slate-900 leading-none">Claim a new record</h1>
+          <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 leading-none">Claim a new record</h1>
           <p className="text-slate-500 text-base leading-relaxed font-medium">Document your achievement and submit it for community verification on the afrirecord ledger.</p>
         </header>
 
@@ -68,17 +68,17 @@ export default function ClaimNewRecordScreen({ onNavigate }: ClaimNewRecordScree
           <div className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="md:col-span-2 space-y-4">
-                <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 ml-2">Record title</label>
+                <label className="text-[10px] font-extrabold tracking-wide text-slate-400 ml-2">Record title</label>
                 <input 
-                  className="w-full bg-white border border-slate-100 rounded-3xl p-6 focus:ring-0 focus:border-primary/20 transition-all text-slate-900 placeholder:text-slate-300 font-bold shadow-sm" 
+                  className="w-full bg-white border border-slate-100 rounded-3xl p-6 focus:ring-0 focus:border-primary/20 transition-colors text-slate-900 placeholder:text-slate-300 font-bold shadow-sm" 
                   placeholder="e.g. Largest community mural in lagos" 
                   type="text"
                 />
               </div>
               <div className="space-y-4">
-                <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 ml-2">Category</label>
+                <label className="text-[10px] font-extrabold tracking-wide text-slate-400 ml-2">Category</label>
                 <div className="relative">
-                  <select className="w-full bg-white border border-slate-100 rounded-3xl p-6 appearance-none focus:ring-0 focus:border-primary/20 transition-all text-slate-900 font-bold shadow-sm">
+                  <select className="w-full bg-white border border-slate-100 rounded-3xl p-6 appearance-none focus:ring-0 focus:border-primary/20 transition-colors text-slate-900 font-bold shadow-sm">
                     <option>Arts & culture</option>
                     <option>Technology</option>
                     <option>Sports</option>
@@ -92,12 +92,12 @@ export default function ClaimNewRecordScreen({ onNavigate }: ClaimNewRecordScree
 
             {/* Editor placeholder */}
             <div className="space-y-4">
-              <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 ml-2">Description & impact</label>
+              <label className="text-[10px] font-extrabold tracking-wide text-slate-400 ml-2">Description & impact</label>
               <div className="bg-white rounded-[40px] overflow-hidden shadow-sm border border-slate-100 p-2">
                 <div className="flex items-center gap-2 p-4 border-b border-slate-50 bg-slate-50/50 rounded-t-[32px]">
-                  <button className="p-3 hover:bg-white rounded-2xl text-slate-400 hover:text-primary transition-all"><Bold size={20} /></button>
-                  <button className="p-3 hover:bg-white rounded-2xl text-slate-400 hover:text-primary transition-all"><Italic size={20} /></button>
-                  <button className="p-3 hover:bg-white rounded-2xl text-slate-400 hover:text-primary transition-all"><List size={20} /></button>
+                  <button className="p-3 hover:bg-white rounded-2xl text-slate-400 hover:text-primary transition-colors"><Bold size={20} /></button>
+                  <button className="p-3 hover:bg-white rounded-2xl text-slate-400 hover:text-primary transition-colors"><Italic size={20} /></button>
+                  <button className="p-3 hover:bg-white rounded-2xl text-slate-400 hover:text-primary transition-colors"><List size={20} /></button>
                 </div>
                 <textarea 
                   className="w-full border-none focus:ring-0 p-8 bg-transparent text-slate-900 placeholder:text-slate-300 font-bold resize-none min-h-[200px]" 
@@ -109,15 +109,15 @@ export default function ClaimNewRecordScreen({ onNavigate }: ClaimNewRecordScree
             {/* Evidence Upload */}
             <div className="space-y-6">
               <div className="flex items-center justify-between px-2">
-                <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Evidence upload</label>
-                <span className="text-[10px] text-slate-300 font-black uppercase tracking-widest">Max 50mb per file</span>
+                <label className="text-[10px] font-extrabold tracking-wide text-slate-400">Evidence upload</label>
+                <span className="text-[10px] text-slate-300 font-extrabold tracking-wide">Max 50mb per file</span>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                <label className="aspect-square rounded-[40px] border-2 border-dashed border-slate-100 bg-white flex flex-col items-center justify-center gap-4 cursor-pointer hover:border-primary/20 transition-all group shadow-sm p-4">
+                <label className="aspect-square rounded-[40px] border-2 border-dashed border-slate-100 bg-white flex flex-col items-center justify-center gap-4 cursor-pointer hover:border-primary/20 transition-colors group shadow-sm p-4">
                   <div className="size-16 rounded-3xl bg-primary/5 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-inner">
                     <Camera size={32} />
                   </div>
-                  <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-primary">Add photo</span>
+                  <span className="text-[10px] font-extrabold tracking-wide text-slate-400 group-hover:text-primary">Add photo</span>
                   <input className="hidden" type="file" />
                 </label>
                 <div className="aspect-square rounded-3xl overflow-hidden relative group shadow-lg">
@@ -142,7 +142,7 @@ export default function ClaimNewRecordScreen({ onNavigate }: ClaimNewRecordScree
                 </div>
                 <div className="aspect-square rounded-3xl bg-slate-100 flex flex-col items-center justify-center gap-2 border border-slate-200">
                   <Video className="text-slate-400" size={28} />
-                  <span className="text-[10px] text-slate-500 font-black uppercase tracking-tighter">MURAL_VID.MP4</span>
+                  <span className="text-[10px] text-slate-500 font-extrabold tracking-tight">MURAL_VID.MP4</span>
                 </div>
               </div>
             </div>
@@ -153,7 +153,7 @@ export default function ClaimNewRecordScreen({ onNavigate }: ClaimNewRecordScree
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <MapPin className="text-primary" size={20} fill="currentColor" />
-                    <span className="font-black text-slate-900 tracking-tight">Enable Geotagging</span>
+                    <span className="font-extrabold text-slate-900 tracking-tight">Enable Geotagging</span>
                   </div>
                   <p className="text-[10px] text-slate-500 font-bold">Verify the exact location of the record.</p>
                 </div>
@@ -166,8 +166,8 @@ export default function ClaimNewRecordScreen({ onNavigate }: ClaimNewRecordScree
                   <Calendar size={22} fill="currentColor" />
                 </div>
                 <div className="space-y-0">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Date of Event</span>
-                  <p className="font-black text-slate-900 text-lg">Oct 24, 2023</p>
+                  <span className="text-[10px] font-extrabold tracking-wide text-slate-400">Date of Event</span>
+                  <p className="font-extrabold text-slate-900 text-lg">Oct 24, 2023</p>
                 </div>
               </div>
             </div>
@@ -179,20 +179,20 @@ export default function ClaimNewRecordScreen({ onNavigate }: ClaimNewRecordScree
                   <ShieldCheck className="text-white" size={24} />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="font-black text-slate-900 text-lg uppercase tracking-tight">Staking Deposit: 500 AfriTokens</h3>
+                  <h3 className="font-extrabold text-slate-900 text-lg tracking-tight">Staking Deposit: 500 AfriTokens</h3>
                   <p className="text-sm text-slate-600 leading-relaxed font-medium">To prevent fraudulent claims, a small staking deposit is required. This will be returned to your AfriPay wallet once the record is verified by the community.</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 mt-4 ml-16">
                 <Info size={14} className="text-primary" />
-                <button className="text-[10px] font-black text-primary underline underline-offset-4 uppercase tracking-widest">Learn about Anti-Fraud</button>
+                <button className="text-[10px] font-extrabold text-primary underline underline-offset-4 tracking-wide">Learn about Anti-Fraud</button>
               </div>
             </div>
           </div>
         </div>
 
         <footer className="pt-8 space-y-4">
-          <button className="w-full py-5 rounded-full bg-gradient-to-br from-primary to-accent text-white font-black text-lg shadow-2xl shadow-primary/30 flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-all group">
+          <button className="w-full py-5 rounded-full bg-gradient-to-br from-primary to-accent text-white font-extrabold text-lg shadow-2xl shadow-primary/30 flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-colors group">
             Submit to Community Review
             <Send size={22} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </button>

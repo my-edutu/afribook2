@@ -59,7 +59,7 @@ export default function TribeVotingScreen({ onNavigate }: TribeVotingScreenProps
           >
             <ArrowLeft className="text-[#904d00]" size={24} />
           </button>
-          <span className="text-2xl font-black bg-gradient-to-br from-[#904d00] to-[#ff8c00] bg-clip-text text-transparent">
+          <span className="text-2xl font-extrabold bg-gradient-to-br from-[#904d00] to-[#ff8c00] bg-clip-text text-transparent">
             AfriBook
           </span>
         </div>
@@ -75,17 +75,17 @@ export default function TribeVotingScreen({ onNavigate }: TribeVotingScreenProps
       <main className="flex-1 px-6 pt-4 pb-40 max-w-3xl mx-auto w-full">
         {/* Chips */}
         <div className="flex items-center gap-2 mb-4">
-          <span className="px-3 py-1 bg-[#0070ea] text-white rounded-full text-[10px] font-black uppercase tracking-wider">Governance</span>
-          <span className="px-3 py-1 bg-stone-200 text-stone-600 rounded-full text-[10px] font-black uppercase tracking-wider">ID: #4402</span>
+          <span className="px-3 py-1 bg-[#0070ea] text-white rounded-full text-[10px] font-extrabold tracking-wider">Governance</span>
+          <span className="px-3 py-1 bg-stone-200 text-stone-600 rounded-full text-[10px] font-extrabold tracking-wider">ID: #4402</span>
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl font-black text-[#1c1c15] leading-tight mb-4 tracking-tight uppercase">
+        <h1 className="text-3xl font-extrabold text-[#1c1c15] leading-tight mb-4 tracking-tight">
           Lagos Tech Hub Venue Booking
         </h1>
 
         {/* Metadata */}
-        <div className="flex items-center gap-6 mb-10 text-xs font-bold text-stone-500 uppercase tracking-tight">
+        <div className="flex items-center gap-6 mb-10 text-xs font-bold text-stone-500 tracking-tight">
           <div className="flex items-center gap-1.5">
             <User size={14} className="text-primary" />
             <span>@adewale_dev</span>
@@ -98,14 +98,14 @@ export default function TribeVotingScreen({ onNavigate }: TribeVotingScreenProps
 
         {/* Current Status Card */}
         <div className="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-stone-200/50 space-y-8 mb-8">
-          <h3 className="text-lg font-black flex items-center gap-2 uppercase tracking-tight">
+          <h3 className="text-lg font-extrabold flex items-center gap-2 tracking-tight">
             <BarChart3 className="text-secondary" size={24} />
             Current Voting Status
           </h3>
 
           <div className="space-y-6">
             <div>
-              <div className="flex justify-between items-center mb-2 font-black text-xs uppercase tracking-tight">
+              <div className="flex justify-between items-center mb-2 font-extrabold text-xs tracking-tight">
                 <span>Yes (Support)</span>
                 <span className="text-secondary">74%</span>
               </div>
@@ -115,7 +115,7 @@ export default function TribeVotingScreen({ onNavigate }: TribeVotingScreenProps
             </div>
 
             <div>
-              <div className="flex justify-between items-center mb-2 font-black text-xs uppercase tracking-tight">
+              <div className="flex justify-between items-center mb-2 font-extrabold text-xs tracking-tight">
                 <span>No (Against)</span>
                 <span className="text-stone-400">26%</span>
               </div>
@@ -125,7 +125,7 @@ export default function TribeVotingScreen({ onNavigate }: TribeVotingScreenProps
             </div>
           </div>
 
-          <div className="pt-6 border-t border-stone-100 flex justify-between items-center text-[10px] font-black uppercase tracking-widest text-stone-400">
+          <div className="pt-6 border-t border-stone-100 flex justify-between items-center text-[10px] font-extrabold tracking-wide text-stone-400">
             <span>Quorum: 15,400 / 20,000 $AFR</span>
             <span className="text-secondary">Reached</span>
           </div>
@@ -134,15 +134,15 @@ export default function TribeVotingScreen({ onNavigate }: TribeVotingScreenProps
         {/* Side Details Card */}
         <div className="bg-primary/5 p-8 rounded-[2.5rem] border border-primary/10 space-y-6 mb-12">
           <div>
-            <p className="text-[10px] font-black text-primary/60 uppercase tracking-widest mb-2">Blockchain</p>
-            <div className="flex items-center gap-2 font-black text-sm uppercase tracking-tight">
+            <p className="text-[10px] font-extrabold text-primary/60 tracking-wide mb-2">Blockchain</p>
+            <div className="flex items-center gap-2 font-extrabold text-sm tracking-tight">
               <ShieldCheck className="text-primary" size={20} />
               Ethereum Mainnet
             </div>
           </div>
           <div>
-            <p className="text-[10px] font-black text-primary/60 uppercase tracking-widest mb-2">Voting Power</p>
-            <div className="text-2xl font-black text-[#1c1c15]">1,250 <span className="text-sm font-bold text-stone-400">$AFR</span></div>
+            <p className="text-[10px] font-extrabold text-primary/60 tracking-wide mb-2">Voting Power</p>
+            <div className="text-2xl font-extrabold text-[#1c1c15]">1,250 <span className="text-sm font-bold text-stone-400">$AFR</span></div>
           </div>
           <div className="rounded-2xl overflow-hidden aspect-video relative shadow-lg">
             <img 
@@ -151,21 +151,21 @@ export default function TribeVotingScreen({ onNavigate }: TribeVotingScreenProps
               className="w-full h-full object-cover grayscale contrast-125 brightness-90"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-white text-[10px] font-black uppercase bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm">Venue Preview</span>
+              <span className="text-white text-[10px] font-extrabold bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm">Venue Preview</span>
             </div>
           </div>
         </div>
 
         {/* Proposal Description */}
         <section className="mb-16">
-          <h2 className="text-2xl font-black text-[#1c1c15] uppercase tracking-tight mb-6">Proposal Description</h2>
+          <h2 className="text-2xl font-extrabold text-[#1c1c15] tracking-tight mb-6">Proposal Description</h2>
           <div className="space-y-4 text-stone-600 font-medium leading-relaxed">
             <p>This proposal seeks community approval for the strategic booking of the <strong>Lagos Tech Hub</strong> Main Auditorium for the upcoming <em>Pan-African Builders Conference</em> scheduled for October 12-14, 2024.</p>
             <p>The Lagos Tech Hub represents the heart of West African innovation. By securing this venue, AfriBook positions itself at the center of the continent's most active developer ecosystem.</p>
             <ul className="list-disc pl-5 space-y-2 py-2">
-              <li className="font-black text-xs uppercase">Total Budget: 4,500 USDC</li>
-              <li className="font-black text-xs uppercase">Capacity: 500 Attendees (Hybrid)</li>
-              <li className="font-black text-xs uppercase">Includes live-streaming infrastructure</li>
+              <li className="font-extrabold text-xs">Total Budget: 4,500 USDC</li>
+              <li className="font-extrabold text-xs">Capacity: 500 Attendees (Hybrid)</li>
+              <li className="font-extrabold text-xs">Includes live-streaming infrastructure</li>
             </ul>
           </div>
         </section>
@@ -173,8 +173,8 @@ export default function TribeVotingScreen({ onNavigate }: TribeVotingScreenProps
         {/* Discussion Section */}
         <section className="mb-20">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl font-black uppercase tracking-tight">Discussion (12)</h2>
-            <button className="text-primary text-xs font-black uppercase tracking-widest flex items-center gap-1">
+            <h2 className="text-2xl font-extrabold tracking-tight">Discussion (12)</h2>
+            <button className="text-primary text-xs font-extrabold tracking-wide flex items-center gap-1">
               Recent <ChevronDown size={14} />
             </button>
           </div>
@@ -186,21 +186,21 @@ export default function TribeVotingScreen({ onNavigate }: TribeVotingScreenProps
                 </div>
                 <div className="flex-1 bg-stone-100 p-6 rounded-3xl rounded-tl-none">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="font-black text-xs uppercase tracking-tight">{comment.user}</span>
+                    <span className="font-extrabold text-xs tracking-tight">{comment.user}</span>
                     <span className="text-[10px] font-bold text-stone-400">{comment.time}</span>
                   </div>
                   <p className="text-stone-600 text-sm font-medium leading-relaxed mb-4">{comment.content}</p>
                   <div className="flex items-center gap-6">
-                    <button className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-[#0070ea]">
+                    <button className="flex items-center gap-1.5 text-[10px] font-extrabold tracking-wide text-[#0070ea]">
                       <ThumbsUp size={14} fill="currentColor" /> {comment.likes}
                     </button>
-                    <button className="text-[10px] font-black uppercase tracking-widest text-stone-400">Reply</button>
+                    <button className="text-[10px] font-extrabold tracking-wide text-stone-400">Reply</button>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <button className="w-full mt-10 py-5 border-2 border-dashed border-stone-200 rounded-2xl text-stone-400 font-black uppercase tracking-widest text-xs hover:bg-stone-50 transition-colors">
+          <button className="w-full mt-10 py-5 border-2 border-dashed border-stone-200 rounded-2xl text-stone-400 font-extrabold tracking-wide text-xs hover:bg-stone-50 transition-colors">
             Add to the conversation
           </button>
         </section>
@@ -216,8 +216,8 @@ export default function TribeVotingScreen({ onNavigate }: TribeVotingScreenProps
           <div className="px-8 pt-4">
             <div className="flex justify-between items-center mb-8">
               <div>
-                <h2 className="text-2xl font-black text-[#1c1c15] uppercase tracking-tight leading-none">Cast Your Vote</h2>
-                <p className="text-[10px] text-stone-400 font-bold uppercase tracking-widest mt-1">Gas fee: ~0.002 ETH</p>
+                <h2 className="text-2xl font-extrabold text-[#1c1c15] tracking-tight leading-none">Cast Your Vote</h2>
+                <p className="text-[10px] text-stone-400 font-bold tracking-wide mt-1">Gas fee: ~0.002 ETH</p>
               </div>
               <div className="size-12 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary">
                 <Wallet size={24} />
@@ -227,28 +227,28 @@ export default function TribeVotingScreen({ onNavigate }: TribeVotingScreenProps
             <div className="grid grid-cols-2 gap-4 mb-8">
               <button 
                 onClick={() => setVoted('yes')}
-                className={`flex flex-col items-center justify-center py-6 rounded-3xl transition-all active:scale-95 border-2 ${voted === 'yes' ? 'bg-[#0070ea]/5 border-[#0070ea]' : 'bg-stone-50 border-transparent'}`}
+                className={`flex flex-col items-center justify-center py-6 rounded-3xl transition-colors active:scale-95 border-2 ${voted === 'yes' ? 'bg-[#0070ea]/5 border-[#0070ea]' : 'bg-stone-50 border-transparent'}`}
               >
                 <CheckCircle2 className={`mb-2 ${voted === 'yes' ? 'text-[#0070ea]' : 'text-stone-300'}`} size={32} />
-                <span className="font-black text-xs uppercase tracking-tight">Vote Yes</span>
+                <span className="font-extrabold text-xs tracking-tight">Vote Yes</span>
               </button>
               <button 
                 onClick={() => setVoted('no')}
-                className={`flex flex-col items-center justify-center py-6 rounded-3xl transition-all active:scale-95 border-2 ${voted === 'no' ? 'bg-red-50 border-red-500' : 'bg-stone-50 border-transparent'}`}
+                className={`flex flex-col items-center justify-center py-6 rounded-3xl transition-colors active:scale-95 border-2 ${voted === 'no' ? 'bg-red-50 border-red-500' : 'bg-stone-50 border-transparent'}`}
               >
                 <XCircle className={`mb-2 ${voted === 'no' ? 'text-red-500' : 'text-stone-300'}`} size={32} />
-                <span className="font-black text-xs uppercase tracking-tight">Vote No</span>
+                <span className="font-extrabold text-xs tracking-tight">Vote No</span>
               </button>
             </div>
 
-            <button className="w-full py-5 rounded-full bg-gradient-to-br from-[#904d00] to-[#ff8c00] text-white font-black text-lg shadow-xl shadow-orange-500/30 flex items-center justify-center gap-3 active:scale-95 transition-transform uppercase tracking-wider">
+            <button className="w-full py-5 rounded-full bg-gradient-to-br from-[#904d00] to-[#ff8c00] text-white font-extrabold text-lg shadow-xl shadow-orange-500/30 flex items-center justify-center gap-3 active:scale-95 transition-transform tracking-wider">
               <Bolt size={24} fill="currentColor" />
               Confirm on Blockchain
             </button>
             
             <div className="flex items-center gap-2 justify-center mt-4 opacity-40">
               <Verified size={12} className="text-stone-500" />
-              <p className="text-[9px] font-black uppercase tracking-widest text-stone-500">
+              <p className="text-[9px] font-extrabold tracking-wide text-stone-500">
                 Encrypted Smart Contract Execution
               </p>
             </div>

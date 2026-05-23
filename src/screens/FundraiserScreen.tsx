@@ -63,7 +63,7 @@ export default function FundraiserScreen({ onNavigate }: FundraiserScreenProps) 
           >
             <ArrowLeft size={24} />
           </button>
-          <span className="text-2xl font-black text-primary uppercase">
+          <span className="text-2xl font-extrabold text-primary">
             AfriBook
           </span>
         </div>
@@ -87,12 +87,12 @@ export default function FundraiserScreen({ onNavigate }: FundraiserScreenProps) 
             </div>
 
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary font-black text-[9px] uppercase tracking-widest mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary font-extrabold text-[9px] tracking-wide mb-4">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                 Fundraising Active
               </div>
               
-              <h1 className="text-3xl font-black text-slate-900 tracking-tight mb-3 uppercase leading-none">
+              <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-3 leading-none">
                 Lagos Tech Scholars 2024
               </h1>
               
@@ -103,25 +103,25 @@ export default function FundraiserScreen({ onNavigate }: FundraiserScreenProps) 
               <div className="space-y-4">
                 <div className="flex justify-between items-end">
                   <div>
-                    <span className="block text-slate-400 text-[9px] font-black uppercase tracking-widest mb-1">Raised</span>
-                    <span className="text-3xl font-black text-primary">$18,450.00</span>
+                    <span className="block text-slate-400 text-[9px] font-extrabold tracking-wide mb-1">Raised</span>
+                    <span className="text-3xl font-extrabold text-primary">$18,450.00</span>
                   </div>
                   <div className="text-right">
-                    <span className="block text-slate-400 text-[9px] font-black uppercase tracking-widest mb-1">Goal: $25k</span>
-                    <span className="text-sm font-black text-slate-900">74%</span>
+                    <span className="block text-slate-400 text-[9px] font-extrabold tracking-wide mb-1">Goal: $25k</span>
+                    <span className="text-sm font-extrabold text-slate-900">74%</span>
                   </div>
                 </div>
 
                 <div className="h-3 w-full bg-slate-100 rounded-full overflow-hidden">
-                  <div className="h-full bg-primary rounded-full transition-all duration-1000" style={{ width: '74%' }}></div>
+                  <div className="h-full bg-primary rounded-full transition-colors duration-1000" style={{ width: '74%' }}></div>
                 </div>
 
                 <div className="flex gap-3 pt-4">
-                  <button className="flex-1 bg-primary text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest shadow-lg shadow-primary/20 flex items-center justify-center gap-2 active:scale-95 transition-transform">
+                  <button className="flex-1 bg-primary text-white py-4 rounded-2xl font-extrabold text-[10px] tracking-wide shadow-lg shadow-primary/20 flex items-center justify-center gap-2 active:scale-95 transition-transform">
                     <Wallet size={16} />
                     Donate Now
                   </button>
-                  <button className="px-5 bg-slate-50 text-slate-900 border border-slate-100 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest flex items-center justify-center shadow-sm active:scale-95 transition-transform">
+                  <button className="px-5 bg-slate-50 text-slate-900 border border-slate-100 py-4 rounded-2xl font-extrabold text-[10px] tracking-wide flex items-center justify-center shadow-sm active:scale-95 transition-transform">
                     <Share2 size={16} />
                   </button>
                 </div>
@@ -138,8 +138,8 @@ export default function FundraiserScreen({ onNavigate }: FundraiserScreenProps) 
                 <Sparkles size={22} />
               </div>
               <div>
-                <h3 className="text-sm font-black uppercase tracking-tight">AI Storyteller</h3>
-                <p className="text-slate-400 text-[8px] font-black uppercase tracking-widest tracking-tighter">Automated updates</p>
+                <h3 className="text-sm font-extrabold tracking-tight">AI Storyteller</h3>
+                <p className="text-slate-400 text-[8px] font-extrabold tracking-wide tracking-tight">Automated updates</p>
               </div>
             </div>
             <button className="text-slate-400 hover:text-primary transition-colors">
@@ -154,10 +154,10 @@ export default function FundraiserScreen({ onNavigate }: FundraiserScreenProps) 
           </div>
 
           <div className="flex gap-3">
-            <button className="flex-1 bg-primary/10 text-primary py-3 rounded-xl font-black text-[9px] uppercase tracking-widest hover:bg-primary hover:text-white transition-all">
+            <button className="flex-1 bg-primary/10 text-primary py-3 rounded-xl font-extrabold text-[9px] tracking-wide hover:bg-primary hover:text-white transition-colors">
               Post Update
             </button>
-            <button className="flex-1 bg-slate-50 text-slate-500 py-3 rounded-xl font-black text-[9px] uppercase tracking-widest hover:bg-slate-100 transition-all">
+            <button className="flex-1 bg-slate-50 text-slate-500 py-3 rounded-xl font-extrabold text-[9px] tracking-wide hover:bg-slate-100 transition-colors">
               Edit Draft
             </button>
           </div>
@@ -166,8 +166,8 @@ export default function FundraiserScreen({ onNavigate }: FundraiserScreenProps) 
         {/* Recent Donors */}
         <div className="bg-white rounded-[2.5rem] p-6 border border-slate-100 shadow-xl shadow-slate-200/50 mb-6">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-sm font-black uppercase tracking-tight">Recent Donors</h3>
-            <span className="text-[9px] font-black text-primary bg-primary/10 px-3 py-1 rounded-full uppercase tracking-widest">142 Total</span>
+            <h3 className="text-sm font-extrabold tracking-tight">Recent Donors</h3>
+            <span className="text-[9px] font-extrabold text-primary bg-primary/10 px-3 py-1 rounded-full tracking-wide">142 Total</span>
           </div>
 
           <div className="space-y-6">
@@ -178,14 +178,14 @@ export default function FundraiserScreen({ onNavigate }: FundraiserScreenProps) 
                     <img src={donor.img} alt={donor.name} className="w-full h-full object-cover" />
                   </div>
                   <div>
-                    <h4 className="font-black text-[10px] text-slate-900 uppercase tracking-tight">{donor.name}</h4>
-                    <p className="text-primary font-black text-xs">{donor.amount} <span className="text-slate-300 font-bold text-[8px] ml-1 uppercase tracking-widest">{donor.time}</span></p>
+                    <h4 className="font-extrabold text-[10px] text-slate-900 tracking-tight">{donor.name}</h4>
+                    <p className="text-primary font-extrabold text-xs">{donor.amount} <span className="text-slate-300 font-bold text-[8px] ml-1 tracking-wide">{donor.time}</span></p>
                   </div>
                 </div>
                 {donor.thanked ? (
-                  <span className="bg-emerald-50 text-emerald-600 text-[8px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Thanked</span>
+                  <span className="bg-emerald-50 text-emerald-600 text-[8px] font-extrabold px-3 py-1 rounded-full tracking-wide">Thanked</span>
                 ) : (
-                  <button className="size-8 rounded-full bg-slate-50 text-slate-300 flex items-center justify-center hover:bg-primary/10 hover:text-primary transition-all">
+                  <button className="size-8 rounded-full bg-slate-50 text-slate-300 flex items-center justify-center hover:bg-primary/10 hover:text-primary transition-colors">
                     <Heart size={16} fill="currentColor" />
                   </button>
                 )}
@@ -198,8 +198,8 @@ export default function FundraiserScreen({ onNavigate }: FundraiserScreenProps) 
         <div className="grid grid-cols-2 gap-4">
           {stats.map((stat, i) => (
             <div key={i} className="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm text-center">
-              <span className="block text-slate-400 text-[8px] font-black uppercase tracking-widest mb-1">{stat.label}</span>
-              <span className={`text-xl font-black ${stat.color || 'text-slate-900'}`}>{stat.value}</span>
+              <span className="block text-slate-400 text-[8px] font-extrabold tracking-wide mb-1">{stat.label}</span>
+              <span className={`text-xl font-extrabold ${stat.color || 'text-slate-900'}`}>{stat.value}</span>
             </div>
           ))}
         </div>

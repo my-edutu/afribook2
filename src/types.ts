@@ -5,6 +5,7 @@
 
 export type Screen = 
   | 'home' 
+  | 'search'
   | 'tribes' 
   | 'watch' 
   | 'discover' 

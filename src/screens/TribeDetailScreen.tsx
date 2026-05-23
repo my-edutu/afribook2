@@ -84,10 +84,10 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
               </div>
               <input 
                 type="text" 
-                placeholder="Message the tribe..." 
-                className="flex-1 text-sm font-medium bg-slate-50 h-12 rounded-2xl px-6 outline-none focus:bg-slate-100 transition-colors"
+                placeholder="Message the tribe…" 
+                className="flex-1 text-sm font-medium bg-slate-50 h-12 rounded-2xl px-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus:bg-slate-100 transition-colors"
               />
-              <button className="size-12 rounded-2xl bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/20 active:scale-95 transition-all">
+              <button className="size-12 rounded-2xl bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/20 active:scale-95 transition-colors">
                 <Send size={20} />
               </button>
             </div>
@@ -99,8 +99,8 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
                   <div className="flex items-center gap-3">
                     <img src={post.user.img} alt={post.user.name} className="size-10 rounded-full object-cover" />
                     <div>
-                      <h4 className="text-sm font-black text-slate-900 leading-none">{post.user.name}</h4>
-                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">{post.user.role} • {post.time}</p>
+                      <h4 className="text-sm font-extrabold text-slate-900 leading-none">{post.user.name}</h4>
+                      <p className="text-[10px] text-slate-400 font-bold tracking-wide mt-1">{post.user.role} / {post.time}</p>
                     </div>
                   </div>
                   <MoreHorizontal size={20} className="text-slate-300" />
@@ -108,13 +108,13 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
                 <p className="text-sm text-slate-700 leading-relaxed font-medium mb-6">{post.content}</p>
                 
                 <div className="flex items-center gap-6 pt-4 border-t border-slate-50">
-                   <button className="flex items-center gap-2 text-slate-400 text-[10px] font-black uppercase">
+                   <button className="flex items-center gap-2 text-slate-400 text-[10px] font-extrabold">
                       <TrendingUp size={16} /> {post.likes}
                    </button>
-                   <button className="flex items-center gap-2 text-slate-400 text-[10px] font-black uppercase">
+                   <button className="flex items-center gap-2 text-slate-400 text-[10px] font-extrabold">
                       <MessageCircle size={16} /> {post.comments.length}
                    </button>
-                   <button className="flex items-center gap-2 text-primary text-[10px] font-black uppercase ml-auto">
+                   <button className="flex items-center gap-2 text-primary text-[10px] font-extrabold ml-auto">
                       <Coins size={16} /> Tip
                    </button>
                 </div>
@@ -125,7 +125,7 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
                      <div key={c.id} className="flex gap-3 bg-slate-50 p-4 rounded-2xl">
                         <img src={c.user.img} alt={c.user.name} className="size-8 rounded-full" />
                         <div className="flex-1">
-                          <p className="text-[10px] font-black text-slate-900">{c.user.name}</p>
+                          <p className="text-[10px] font-extrabold text-slate-900">{c.user.name}</p>
                           <p className="text-xs text-slate-500 font-medium leading-relaxed">{c.text}</p>
                         </div>
                      </div>
@@ -139,11 +139,11 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
         return (
           <div className="space-y-6">
             <div className="flex items-center justify-between px-2">
-              <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Active members</h3>
+              <h3 className="text-[10px] font-extrabold text-slate-400 tracking-wide">Active members</h3>
               <div className="flex gap-2">
                  <button 
                    onClick={() => setIsAdmin(!isAdmin)}
-                   className={`px-4 py-2 rounded-xl text-[9px] font-black uppercase tracking-widest transition-all ${isAdmin ? 'bg-rose-50 text-rose-500' : 'bg-slate-100 text-slate-400'}`}
+                   className={`px-4 py-2 rounded-xl text-[9px] font-extrabold tracking-wide transition-colors ${isAdmin ? 'bg-rose-50 text-rose-500' : 'bg-slate-100 text-slate-400'}`}
                  >
                    Admin mode: {isAdmin ? 'ON' : 'OFF'}
                  </button>
@@ -156,8 +156,8 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
                   <div className="flex items-center gap-4">
                     <img src={member.img} alt={member.name} className="size-12 rounded-2xl object-cover" />
                     <div>
-                      <h4 className="text-sm font-black text-slate-900 leading-none">{member.name}</h4>
-                      <p className={`text-[10px] font-bold uppercase tracking-tight mt-1 ${
+                      <h4 className="text-sm font-extrabold text-slate-900 leading-none">{member.name}</h4>
+                      <p className={`text-[10px] font-bold tracking-tight mt-1 ${
                         member.role === 'Elder' ? 'text-amber-500' : 
                         member.role === 'Guardian' ? 'text-emerald-500' : 'text-slate-400'
                       }`}>{member.role}</p>
@@ -168,14 +168,14 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
                     <div className="relative">
                       <button 
                         onClick={() => setShowRoleMenu(showRoleMenu === member.id ? null : member.id)}
-                        className="bg-slate-50 px-4 py-2 rounded-xl text-[9px] font-black uppercase tracking-widest flex items-center gap-2"
+                        className="bg-slate-50 px-4 py-2 rounded-xl text-[9px] font-extrabold tracking-wide flex items-center gap-2"
                       >
                         Change role <ChevronDown size={14} />
                       </button>
                       {showRoleMenu === member.id && (
                         <div className="absolute top-full right-0 mt-2 w-32 bg-white rounded-2xl shadow-2xl border border-slate-100 py-2 z-50">
                            {['Elder', 'Guardian', 'Nomad'].map(r => (
-                             <button key={r} className="w-full text-left px-4 py-2 text-[10px] font-black uppercase hover:bg-slate-50 transition-colors">{r}</button>
+                             <button key={r} className="w-full text-left px-4 py-2 text-[10px] font-extrabold hover:bg-slate-50 transition-colors">{r}</button>
                            ))}
                         </div>
                       )}
@@ -191,7 +191,7 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
             
             <button className="w-full py-4 border-2 border-dashed border-slate-200 rounded-[28px] text-slate-400 flex items-center justify-center gap-2 hover:bg-slate-50 transition-colors group">
               <UserPlus size={20} className="group-hover:scale-110 transition-transform" />
-              <span className="text-[10px] font-black uppercase tracking-widest">Invite members</span>
+              <span className="text-[10px] font-extrabold tracking-wide">Invite members</span>
             </button>
           </div>
         );
@@ -201,11 +201,11 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
             <div className="bg-slate-900 rounded-[40px] p-10 text-white relative overflow-hidden shadow-2xl">
                <div className="relative z-10 text-center flex flex-col items-center">
                  <Wallet size={48} className="text-primary mb-6" />
-                 <p className="text-white/40 text-[10px] font-black uppercase tracking-widest mb-2">Vault balance</p>
-                 <h2 className="text-4xl font-black tracking-tighter mb-8">45,240 <span className="text-primary">AFR</span></h2>
+                 <p className="text-white/40 text-[10px] font-extrabold tracking-wide mb-2">Vault balance</p>
+                 <h2 className="text-4xl font-extrabold tracking-tight mb-8">45,240 <span className="text-primary">AFR</span></h2>
                  <div className="flex gap-4 w-full">
-                    <button className="flex-1 bg-white text-slate-900 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest shadow-xl shadow-white/5 active:scale-95 transition-all">Deposit</button>
-                    <button className="flex-1 bg-white/10 backdrop-blur-md text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest border border-white/10 active:scale-95 transition-all">Proposal</button>
+                    <button className="flex-1 bg-white text-slate-900 py-4 rounded-2xl font-extrabold text-[10px] tracking-wide shadow-xl shadow-white/5 active:scale-95 transition-colors">Deposit</button>
+                    <button className="flex-1 bg-white/10 backdrop-blur-md text-white py-4 rounded-2xl font-extrabold text-[10px] tracking-wide border border-white/10 active:scale-95 transition-colors">Proposal</button>
                  </div>
                </div>
                <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
@@ -214,7 +214,7 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
             </div>
 
             <section>
-              <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4 px-2">Recent activity</h3>
+              <h3 className="text-[10px] font-extrabold text-slate-400 tracking-wide mb-4 px-2">Recent activity</h3>
               <div className="space-y-3">
                 {[
                   { title: 'Server Hosting', amount: '-450 AFR', type: 'expense' },
@@ -225,9 +225,9 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
                       <div className={`size-12 rounded-2xl ${act.type === 'income' ? 'bg-emerald-50 text-emerald-500' : 'bg-rose-50 text-rose-500'} flex items-center justify-center`}>
                         {act.type === 'income' ? <TrendingUp size={20} /> : <TrendingDown size={20} />}
                       </div>
-                      <h4 className="text-sm font-black text-slate-900">{act.title}</h4>
+                      <h4 className="text-sm font-extrabold text-slate-900">{act.title}</h4>
                     </div>
-                    <span className={`text-sm font-black ${act.type === 'income' ? 'text-emerald-500' : 'text-slate-900'}`}>{act.amount}</span>
+                    <span className={`text-sm font-extrabold ${act.type === 'income' ? 'text-emerald-500' : 'text-slate-900'}`}>{act.amount}</span>
                   </div>
                 ))}
               </div>
@@ -240,7 +240,7 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
             <div className="bg-white p-8 rounded-[40px] border border-slate-100 shadow-sm relative overflow-hidden">
                <Shield className="absolute -top-10 -right-10 size-48 text-primary/5 -rotate-12" />
                <div className="relative z-10">
-                 <h3 className="text-xl font-black text-slate-900 mb-2">Tribal laws</h3>
+                 <h3 className="text-xl font-extrabold text-slate-900 mb-2">Tribal laws</h3>
                  <p className="text-xs text-slate-500 font-medium leading-relaxed mb-8">This tribe operates under the Lagos Tech Charter, verified by decentralized node verification.</p>
                  <div className="space-y-4">
                     {[
@@ -258,7 +258,7 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
             </div>
             <button 
               onClick={() => onNavigate('arivote')}
-              className="w-full bg-slate-900 text-white py-6 rounded-[32px] font-black text-xs uppercase tracking-[0.2em] shadow-2xl shadow-slate-900/20 active:scale-95 transition-all flex items-center justify-center gap-3"
+              className="w-full bg-slate-900 text-white py-6 rounded-[32px] font-extrabold text-xs tracking-wide shadow-2xl shadow-slate-900/20 active:scale-95 transition-colors flex items-center justify-center gap-3"
             >
               <Award size={20} />
               Open governance portal
@@ -277,9 +277,9 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
                   <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="p-6">
-                  <h4 className="text-xs font-black text-slate-900 mb-1 uppercase tracking-tight">{p.name}</h4>
-                  <p className="text-primary font-black text-sm mb-4">{p.price}</p>
-                  <button className="w-full bg-slate-900 text-white py-3 rounded-xl text-[9px] font-black uppercase tracking-widest shadow-xl shadow-slate-900/10">Buy now</button>
+                  <h4 className="text-xs font-extrabold text-slate-900 mb-1 tracking-tight">{p.name}</h4>
+                  <p className="text-primary font-extrabold text-sm mb-4">{p.price}</p>
+                  <button className="w-full bg-slate-900 text-white py-3 rounded-xl text-[9px] font-extrabold tracking-wide shadow-xl shadow-slate-900/10">Buy now</button>
                 </div>
               </div>
             ))}
@@ -327,10 +327,10 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
            </div>
            <div className="pb-4">
              <div className="flex items-center gap-2 mb-1">
-               <h1 className="text-3xl font-black text-slate-900 tracking-tighter leading-none">Lagos Tech</h1>
+               <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight leading-none">Lagos Tech</h1>
                <Verified className="text-secondary" size={20} fill="currentColor" />
              </div>
-             <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">15.2k Members • West Africa</p>
+             <p className="text-[10px] font-extrabold tracking-wide text-slate-400">15.2k Members / West Africa</p>
            </div>
         </div>
       </div>
@@ -342,7 +342,7 @@ export default function TribeDetailScreen({ onNavigate }: TribeDetailScreenProps
               <button 
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`text-[10px] font-black uppercase tracking-[0.2em] transition-all relative ${
+                className={`text-[10px] font-extrabold tracking-wide transition-colors relative ${
                   activeTab === tab.id ? 'text-primary' : 'text-slate-400 hover:text-slate-900'
                 }`}
               >

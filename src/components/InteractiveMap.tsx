@@ -163,7 +163,7 @@ export default function InteractiveMap() {
             </div>
             <h4 className="font-bold text-sm text-slate-800">{selectedCity.name}</h4>
           </div>
-          <p className="text-[10px] text-slate-500 font-medium tracking-tight">Active Hub • 14 Records Claimed</p>
+          <p className="text-[10px] text-slate-500 font-medium tracking-tight">Active Hub / 14 Records Claimed</p>
         </div>
       )}
 
@@ -174,7 +174,7 @@ export default function InteractiveMap() {
              const svg = d3.select(svgRef.current);
              svg.transition().duration(750).call(d3.zoom<SVGSVGElement, unknown>().transform, d3.zoomIdentity);
           }}
-          className="bg-white/90 backdrop-blur-sm p-2 rounded-lg shadow-md border border-slate-200 text-slate-600 active:scale-95 transition-all"
+          className="bg-white/90 backdrop-blur-sm p-2 rounded-lg shadow-md border border-slate-200 text-slate-600 active:scale-95 transition-colors"
         >
           <div className="w-4 h-4 flex items-center justify-center font-bold">↺</div>
         </button>
